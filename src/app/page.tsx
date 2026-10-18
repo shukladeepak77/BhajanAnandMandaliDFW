@@ -60,7 +60,7 @@ export default function Home() {
         style={{ background: "var(--cream-card)" }}
       >
         <p className="text-xs font-bold tracking-wide text-orange-dark uppercase sm:text-sm">
-          Our Offerings at a Glance
+          Our Seva at a Glance
         </p>
         <div className="mx-auto mt-5 grid max-w-4xl grid-cols-1 gap-x-10 gap-y-4 text-left sm:grid-cols-2">
           {highlightOfferings.map((item) => (
@@ -75,7 +75,7 @@ export default function Home() {
           href="/spiritual-seva"
           className="mt-5 inline-block text-sm font-semibold text-orange-dark hover:underline"
         >
-          See everything we offer →
+          See our full Spiritual Seva →
         </Link>
       </section>
 
@@ -98,9 +98,9 @@ export default function Home() {
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-foreground/80 sm:text-base">
             Bhajan Anand Mandali brings together voices, instruments and
             hearts in devotion through bhajan, kirtan and sankirtan, serving
-            the DFW area, Texas. Each gathering is an offering — sung in the
-            spirit of Sanatan Dharma, bringing peace and community wherever
-            we go.
+            the DFW area, Texas. Each gathering is an act of seva — sung in
+            the spirit of Sanatan Dharma, bringing peace and community
+            wherever we go.
           </p>
           <a
             href="#invite"
@@ -133,7 +133,7 @@ export default function Home() {
               icon: "🕉️",
               title: "Rooted in Bhakti",
               description:
-                "Every bhajan and kirtan is offered with sincerity and devotion — focused on spiritual upliftment.",
+                "Every bhajan and kirtan is performed with sincerity and devotion — focused on spiritual upliftment.",
             },
             {
               icon: "🤝",
@@ -186,9 +186,9 @@ export default function Home() {
             style={{ background: "var(--orange)" }}
           />
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-foreground/80 sm:text-base">
-            From Mata Ka Jagran and Bhajan Sandhya to Sundarkand Path and Akhand
-            RamCharitManas Path — see our full Spiritual Seva offerings,
-            each explained in detail, on a dedicated page.
+            From Mata Ka Jagran and Bhajan Sandhya to Sundarkand Path and
+            Akhand RamCharitManas Path — see our full Spiritual Seva, each
+            explained in detail, on a dedicated page.
           </p>
           <Link
             href="/spiritual-seva"
