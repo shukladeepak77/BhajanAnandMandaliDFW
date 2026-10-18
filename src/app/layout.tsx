@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Tiro_Devanagari_Hindi, Noto_Sans_Devanagari } from "next/font/google";
+import { Playfair_Display, Poppins, Tiro_Devanagari_Hindi } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,15 +12,25 @@ import {
   GA_MEASUREMENT_ID,
 } from "@/lib/site";
 
+// Matches dharmpathusa.com's own template exactly: Playfair Display for
+// headings, Poppins for body text (sampled from the live site's computed
+// styles), plus Tiro Devanagari for the Hindi tagline/verse lines.
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["600", "700"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 const tiroDevanagari = Tiro_Devanagari_Hindi({
   variable: "--font-tiro-devanagari",
   subsets: ["devanagari", "latin"],
   weight: "400",
-});
-
-const notoSansDevanagari = Noto_Sans_Devanagari({
-  variable: "--font-noto-sans-devanagari",
-  subsets: ["devanagari", "latin"],
 });
 
 export const metadata: Metadata = {
@@ -40,6 +50,8 @@ export const metadata: Metadata = {
     "Keertan DFW",
     "Sundarkand Path Texas",
     "Satsang Dallas Fort Worth",
+    "Naam Jap DFW",
+    "Hanuman Chalisa Path Texas",
   ],
   category: "religion",
   alternates: {
@@ -100,7 +112,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${tiroDevanagari.variable} ${notoSansDevanagari.variable} h-full antialiased`}
+      className={`${playfairDisplay.variable} ${poppins.variable} ${tiroDevanagari.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {GA_MEASUREMENT_ID && (

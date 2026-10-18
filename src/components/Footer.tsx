@@ -1,40 +1,75 @@
 import { CONTACT_PHONE, CONTACT_PHONE_HREF, WHATSAPP_URL } from "@/lib/site";
 
+const QUICK_LINKS = [
+  { label: "What We Do", href: "#what-we-do" },
+  { label: "Scripture & Discourse", href: "#discourse" },
+  { label: "Invite Us", href: "#invite" },
+  { label: "FAQ", href: "#faq" },
+];
+
 export default function Footer() {
   return (
-    <footer
-      className="shadow-[0_-2px_16px_rgba(69,10,10,0.25)]"
-      style={{
-        background:
-          "linear-gradient(90deg, #450a0a 0%, #7c2d12 50%, #9a3412 100%)",
-        borderTop: "1px solid rgba(253,224,71,0.35)",
-      }}
-    >
-      <div className="mx-auto max-w-6xl px-4 py-8 text-center text-sm text-white/85 sm:px-6">
-        <p className="font-devanagari text-lg font-semibold text-gold">
-          भजन से आनंद, आनंद से भगवान
-        </p>
-        <p className="mt-1 text-xs text-white/70 italic sm:text-sm">
-          Bhajan se Anand, Anand se Bhagwan
-        </p>
+    <footer style={{ background: "var(--footer-bg)" }}>
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
+          <div>
+            <p className="font-display text-lg font-bold text-white">
+              Bhajan Anand Mandali
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-white/60">
+              A community of devotional singing — Keertan, Bhajan Sandhya,
+              Mata Ki Chowki, Sundarkand Path, Naam Jap, Satsang and
+              scripture sessions — serving the DFW area, Texas.
+            </p>
+          </div>
 
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/75 sm:text-sm">
-          <a href={`tel:${CONTACT_PHONE_HREF}`} className="hover:text-gold">
-            📞 {CONTACT_PHONE}
-          </a>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gold"
-          >
-            💬 WhatsApp
-          </a>
+          <div>
+            <h3 className="font-display border-b border-gold/30 pb-2 text-base font-bold text-white">
+              Quick Links
+            </h3>
+            <ul className="mt-3 flex flex-col gap-2 text-sm text-white/60">
+              {QUICK_LINKS.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="hover:text-gold">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-display border-b border-gold/30 pb-2 text-base font-bold text-white">
+              Connect
+            </h3>
+            <div className="mt-3 flex flex-col gap-2 text-sm text-white/60">
+              <a href={`tel:${CONTACT_PHONE_HREF}`} className="hover:text-gold">
+                📞 {CONTACT_PHONE}
+              </a>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold"
+              >
+                💬 WhatsApp
+              </a>
+              <span>📍 DFW Area, Texas</span>
+            </div>
+          </div>
         </div>
 
-        <p className="mt-4 text-xs text-white/60">
-          Jai Shri Ram · Jai Mata Di · Har Har Mahadev · Jai Shri Krishna
-        </p>
+        <div className="mt-10 border-t border-white/10 pt-6 text-center">
+          <p className="font-devanagari text-base font-semibold text-gold">
+            भजन से आनंद, आनंद से भगवान
+          </p>
+          <p className="mt-1 text-xs text-white/50">
+            Jai Shri Ram · Jai Mata Di · Har Har Mahadev · Jai Shri Krishna
+          </p>
+          <p className="mt-4 text-xs text-white/40">
+            Serving the DFW community with devotion.
+          </p>
+        </div>
       </div>
     </footer>
   );

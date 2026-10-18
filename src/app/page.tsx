@@ -1,7 +1,34 @@
 import Image from "next/image";
-import HeroBanner from "@/components/HeroBanner";
-import { offerings, faqs } from "@/content/mandali";
+import Hero from "@/components/Hero";
+import { offeringGroups, highlightOfferings, faqs } from "@/content/mandali";
 import { SITE_URL, CONTACT_PHONE, CONTACT_PHONE_HREF, WHATSAPP_URL } from "@/lib/site";
+
+const INVITE_STEPS = [
+  {
+    step: "STEP 1",
+    title: "Choose Your Gathering",
+    description:
+      "Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Naam Jap, Satsang, or a scripture session.",
+  },
+  {
+    step: "STEP 2",
+    title: "Share Date & Location",
+    description:
+      "Let us know your preferred date, time, and your home or venue in the DFW area.",
+  },
+  {
+    step: "STEP 3",
+    title: "Reach Out",
+    description:
+      "Call or message us on WhatsApp with your details and any special intentions.",
+  },
+  {
+    step: "STEP 4",
+    title: "We Coordinate",
+    description:
+      "Our team confirms with you, guides on samagri if needed, and prepares everything with reverence.",
+  },
+];
 
 export default function Home() {
   const jsonLd = {
@@ -13,146 +40,314 @@ export default function Home() {
   };
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+    <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <HeroBanner
-        eyebrow="॥ श्री गणेशाय नमः ॥"
-        title="Bhajan Anand Mandali"
-        description="भजन से आनंद, आनंद से भगवान — Keertan · Bhajan Sandhya · Mata ki Chowki · Sundarkand Path · Satsang, serving the DFW area, Texas."
-      />
+      <Hero />
 
-      {/* Poster */}
-      <div className="mt-8 flex justify-center">
-        <div className="w-full max-w-sm overflow-hidden rounded-[24px] shadow-[var(--shadow)]">
-          <Image
-            src="/images/poster.webp"
-            alt="Bhajan Anand Mandali — Keertan, Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang"
-            width={1080}
-            height={1920}
-            className="h-auto w-full"
-            priority
-          />
+      {/* Badge card: poster + highlight offerings, mirrors the "501(c)(3)
+          NON-PROFIT" badge-card pattern on dharmpathusa.com's homepage */}
+      <div className="mx-auto -mt-10 max-w-3xl px-4 sm:px-6">
+        <div
+          className="rounded-[22px] px-5 py-8 text-center shadow-[var(--shadow)] sm:px-10 sm:py-10"
+          style={{ background: "var(--cream-card)" }}
+        >
+          <span
+            className="inline-block rounded-full px-4 py-1.5 text-xs font-bold tracking-wide text-white"
+            style={{ background: "var(--maroon)" }}
+          >
+            DFW AREA · TEXAS
+          </span>
+          <h2 className="font-display mt-4 text-2xl font-bold text-maroon sm:text-3xl">
+            Bhajan Anand Mandali
+          </h2>
+          <p className="font-devanagari mt-3 text-lg font-semibold text-maroon-dark">
+            भजन से आनंद, आनंद से भगवान
+          </p>
+          <p className="mt-1 text-xs text-foreground/60 italic sm:text-sm">
+            Bhajan se Anand, Anand se Bhagwan
+          </p>
+
+          <div className="mt-6 flex justify-center">
+            <div className="w-full max-w-[280px] overflow-hidden rounded-[18px] shadow-md">
+              <Image
+                src="/images/poster.webp"
+                alt="Bhajan Anand Mandali — Keertan, Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang"
+                width={1080}
+                height={1920}
+                className="h-auto w-full"
+                priority
+              />
+            </div>
+          </div>
+
+          <p className="mt-6 text-xs font-bold tracking-wide text-orange-dark uppercase sm:text-sm">
+            Our Offerings at a Glance
+          </p>
+          <div className="mx-auto mt-4 grid max-w-xl grid-cols-1 gap-x-6 gap-y-3 text-left sm:grid-cols-2">
+            {highlightOfferings.map((item) => (
+              <p key={item.title} className="text-sm text-foreground/85">
+                <span className="mr-1.5">{item.icon}</span>
+                <span className="font-semibold text-maroon">{item.title}</span>
+                <span className="text-foreground/60"> — {item.description}</span>
+              </p>
+            ))}
+          </div>
+          <a
+            href="#what-we-do"
+            className="mt-5 inline-block text-sm font-semibold text-orange-dark hover:underline"
+          >
+            See everything we offer →
+          </a>
         </div>
       </div>
 
-      {/* About */}
-      <section className="mt-10 rounded-[24px] border border-border-muted bg-surface px-5 py-7 text-center shadow-[var(--shadow)] sm:px-8 sm:py-9">
-        <p className="text-sm font-semibold tracking-wide text-orange-900/70 uppercase">
-          Who We Are
-        </p>
-        <h2 className="mt-1 text-2xl font-bold text-orange-900 sm:text-3xl">
-          A Community of Devotional Singing
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-foreground/85 sm:text-base">
-          Bhajan Anand Mandali brings together voices, instruments and
-          hearts in devotion through bhajan, kirtan and sankirtan, serving
-          the DFW area, Texas. We gather to sing the names of the Divine,
-          build community, and offer this seva in the spirit of Sanatan
-          Dharma — open to all who wish to join in song.
-        </p>
+      {/* Why We Gather */}
+      <section
+        className="mt-16 px-4 py-14 sm:px-6"
+        style={{ background: "var(--cream-card)" }}
+      >
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs font-bold tracking-[0.15em] text-orange-dark uppercase">
+            Why We Gather
+          </p>
+          <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl">
+            Singing in Devotion, Uniting in Dharma
+          </h2>
+          <div
+            className="mx-auto mt-3 h-1 w-14 rounded-full"
+            style={{ background: "var(--orange)" }}
+          />
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-foreground/80 sm:text-base">
+            Bhajan Anand Mandali brings together voices, instruments and
+            hearts in devotion through bhajan, kirtan and sankirtan, serving
+            the DFW area, Texas. Each gathering is an offering — sung in the
+            spirit of Sanatan Dharma, bringing peace and community wherever
+            we go.
+          </p>
+          <a
+            href="#invite"
+            className="mt-6 inline-block rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
+            style={{ background: "var(--orange)" }}
+          >
+            Invite Us to Your Gathering →
+          </a>
+        </div>
       </section>
 
-      {/* What We Do */}
-      <section className="mt-10">
-        <div className="text-center">
-          <p className="text-sm font-semibold tracking-wide text-orange-900/70 uppercase">
-            What We Do
+      {/* Our Values */}
+      <section className="px-4 py-14 sm:px-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs font-bold tracking-[0.15em] text-orange-dark uppercase">
+            Our Values
           </p>
-          <h2 className="mt-1 text-2xl font-bold text-orange-900 sm:text-3xl">
-            Bhajan &amp; Kirtan Gatherings
+          <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl">
+            The Spirit Behind Every Gathering
           </h2>
+          <div
+            className="mx-auto mt-3 h-1 w-14 rounded-full"
+            style={{ background: "var(--orange)" }}
+          />
         </div>
 
-        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {offerings.map((item) => (
+        <div className="mx-auto mt-10 flex max-w-2xl flex-col gap-6 text-left">
+          {[
+            {
+              icon: "🕉️",
+              title: "Rooted in Bhakti",
+              description:
+                "Every bhajan and kirtan is offered with sincerity and devotion — focused on spiritual upliftment.",
+            },
+            {
+              icon: "🤝",
+              title: "Community Through Song",
+              description:
+                "Devotional singing brings families and neighbors together — one gathering at a time.",
+            },
+            {
+              icon: "🙏",
+              title: "Open to All",
+              description:
+                "Every gathering we lead welcomes anyone who wishes to listen, sing along, or simply be present.",
+            },
+          ].map((value) => (
+            <div key={value.title} className="flex items-start gap-4">
+              <span
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-lg"
+                style={{ background: "var(--gold)", color: "var(--maroon-dark)" }}
+              >
+                {value.icon}
+              </span>
+              <div>
+                <h3 className="font-display text-base font-bold text-maroon">
+                  {value.title}
+                </h3>
+                <p className="mt-1 text-sm leading-relaxed text-foreground/75">
+                  {value.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* What We Do / Scripture groups */}
+      {offeringGroups.map((group, idx) => (
+        <section
+          key={group.title}
+          id={idx === 0 ? "what-we-do" : "discourse"}
+          className="scroll-mt-20 px-4 py-14 sm:px-6"
+          style={{ background: idx % 2 === 0 ? "var(--cream-card)" : "var(--surface)" }}
+        >
+          <div className="mx-auto max-w-5xl">
+            <div className="text-center">
+              <p className="text-xs font-bold tracking-[0.15em] text-orange-dark uppercase">
+                {group.eyebrow}
+              </p>
+              <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl">
+                {group.title}
+              </h2>
+              <div
+                className="mx-auto mt-3 h-1 w-14 rounded-full"
+                style={{ background: "var(--orange)" }}
+              />
+              <p className="mx-auto mt-4 max-w-2xl text-sm text-foreground/70 sm:text-base">
+                {group.blurb}
+              </p>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {group.items.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-[18px] px-5 py-6 shadow-[var(--shadow)]"
+                  style={{ background: "var(--surface)" }}
+                >
+                  <div className="text-3xl">{item.icon}</div>
+                  <h3 className="font-display mt-3 text-base font-bold text-maroon">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-foreground/75">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
+
+      {/* How to Invite Us */}
+      <section
+        id="invite"
+        className="scroll-mt-20 px-4 py-14 sm:px-6"
+        style={{ background: "var(--cream-card)" }}
+      >
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs font-bold tracking-[0.15em] text-orange-dark uppercase">
+            Invite Us
+          </p>
+          <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl">
+            How to Invite Bhajan Anand Mandali
+          </h2>
+          <div
+            className="mx-auto mt-3 h-1 w-14 rounded-full"
+            style={{ background: "var(--orange)" }}
+          />
+        </div>
+
+        <div className="mx-auto mt-10 flex max-w-xl flex-col gap-4">
+          {INVITE_STEPS.map((s) => (
             <div
-              key={item.title}
-              className="rounded-[20px] border border-border-muted bg-surface px-5 py-6 shadow-[var(--shadow)]"
+              key={s.step}
+              className="rounded-[16px] px-5 py-5 shadow-sm"
+              style={{ background: "var(--surface)" }}
             >
-              <div className="text-3xl">{item.icon}</div>
-              <h3 className="mt-3 text-lg font-bold text-orange-900">
-                {item.title}
+              <p className="text-xs font-bold tracking-wide text-orange-dark">
+                {s.step}
+              </p>
+              <h3 className="font-display mt-1 text-base font-bold text-maroon">
+                {s.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-foreground/80">
-                {item.description}
+              <p className="mt-1 text-sm leading-relaxed text-foreground/75">
+                {s.description}
               </p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Invite / Connect */}
-      <section className="mt-10 rounded-[24px] border border-border-muted bg-surface px-5 py-7 text-center shadow-[var(--shadow)] sm:px-8 sm:py-9">
-        <p className="text-sm font-semibold tracking-wide text-orange-900/70 uppercase">
-          Invite Us
-        </p>
-        <h2 className="mt-1 text-2xl font-bold text-orange-900 sm:text-3xl">
-          Invite Us to Your Home for Keertan 🙏
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-foreground/85 sm:text-base">
-          Reach out below and we&apos;ll be glad to coordinate a Keertan,
-          Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path or Satsang for
-          your home or community gathering.
-        </p>
-
-        <div className="mx-auto mt-6 flex max-w-sm flex-col gap-3 sm:flex-row sm:justify-center">
-          <a
-            href={`tel:${CONTACT_PHONE_HREF}`}
-            className="rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
-            style={{
-              background: "linear-gradient(135deg, #7c2d12 0%, #ea580c 100%)",
-            }}
-          >
-            📞 Call {CONTACT_PHONE}
-          </a>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5"
-            style={{ background: "#25D366" }}
-          >
-            💬 WhatsApp
-          </a>
+      {/* Final CTA */}
+      <section className="px-4 py-14 sm:px-6">
+        <div
+          className="mx-auto max-w-3xl rounded-[22px] px-6 py-10 text-center shadow-[var(--shadow)] sm:px-10"
+          style={{ background: "var(--cream-card)" }}
+        >
+          <h2 className="font-display text-2xl font-bold text-maroon sm:text-3xl">
+            Invite Us · Connect With Us
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-foreground/75 sm:text-base">
+            Whether it&apos;s a bhajan gathering, a scripture session, or a
+            Sundarkand Path — we are here to serve with full devotion.
+          </p>
+          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a
+              href={`tel:${CONTACT_PHONE_HREF}`}
+              className="rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
+              style={{ background: "var(--orange)" }}
+            >
+              📞 Call {CONTACT_PHONE}
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5"
+              style={{ background: "#25D366" }}
+            >
+              💬 WhatsApp
+            </a>
+          </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="mt-10">
-        <div className="text-center">
-          <p className="text-sm font-semibold tracking-wide text-orange-900/70 uppercase">
-            Good to Know
-          </p>
-          <h2 className="mt-1 text-2xl font-bold text-orange-900 sm:text-3xl">
-            Frequently Asked
-          </h2>
-        </div>
-
-        <div className="mt-6 flex flex-col gap-4">
-          {faqs.map((item) => (
+      <section id="faq" className="scroll-mt-20 px-4 py-14 sm:px-6">
+        <div className="mx-auto max-w-3xl">
+          <div className="text-center">
+            <p className="text-xs font-bold tracking-[0.15em] text-orange-dark uppercase">
+              Good to Know
+            </p>
+            <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl">
+              Frequently Asked
+            </h2>
             <div
-              key={item.question}
-              className="rounded-[18px] border border-border-muted bg-surface px-5 py-5 shadow-sm"
-            >
-              <h3 className="text-base font-bold text-orange-900">
-                {item.question}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-foreground/80">
-                {item.answer}
-              </p>
-            </div>
-          ))}
+              className="mx-auto mt-3 h-1 w-14 rounded-full"
+              style={{ background: "var(--orange)" }}
+            />
+          </div>
+
+          <div className="mt-8 flex flex-col gap-4">
+            {faqs.map((item) => (
+              <div
+                key={item.question}
+                className="rounded-[16px] px-5 py-5 shadow-sm"
+                style={{ background: "var(--cream-card)" }}
+              >
+                <h3 className="font-display text-base font-bold text-maroon">
+                  {item.question}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-foreground/75">
+                  {item.answer}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
-
-      {/* Closing line */}
-      <p className="font-devanagari mt-10 text-center text-base font-semibold text-orange-900/80">
-        Jai Shri Ram · Jai Mata Di · Har Har Mahadev · Jai Shri Krishna
-      </p>
     </div>
   );
 }
