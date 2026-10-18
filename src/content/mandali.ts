@@ -67,7 +67,7 @@ export const offeringGroups: OfferingGroup[] = [
         icon: "🕉️",
         title: "Satsang",
         description:
-          "Gatherings of devotional singing, reflection and fellowship — bringing the community together in a spirit of bhakti.",
+          "Gatherings of devotional singing, reflection and togetherness — bringing the community together in a spirit of bhakti.",
       },
     ],
   },
