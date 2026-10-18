@@ -48,35 +48,36 @@ export default function Home() {
 
       <Hero />
 
-      {/* Offerings-at-a-glance card: the banner above already carries the
-          title/tagline/contact visually, so this card's job is just the
+      {/* Offerings-at-a-glance: the banner above already carries the
+          title/tagline/contact visually, so this section's job is just the
           quick-reference offering descriptions, mirrors the "OUR MISSION"
-          icon-list pattern on dharmpathusa.com's homepage. */}
-      <div className="mx-auto -mt-8 max-w-6xl px-4 sm:px-6">
-        <div
-          className="rounded-[22px] px-5 py-8 text-center shadow-[var(--shadow)] sm:px-10 sm:py-10"
-          style={{ background: "var(--cream-card)" }}
-        >
-          <p className="text-xs font-bold tracking-wide text-orange-dark uppercase sm:text-sm">
-            Our Offerings at a Glance
-          </p>
-          <div className="mx-auto mt-5 grid max-w-4xl grid-cols-1 gap-x-10 gap-y-4 text-left sm:grid-cols-2">
-            {highlightOfferings.map((item) => (
-              <p key={item.title} className="text-sm text-foreground/85">
-                <span className="mr-1.5">{item.icon}</span>
-                <span className="font-semibold text-maroon">{item.title}</span>
-                <span className="text-foreground/60"> — {item.description}</span>
-              </p>
-            ))}
-          </div>
-          <Link
-            href="/spiritual-seva"
-            className="mt-5 inline-block text-sm font-semibold text-orange-dark hover:underline"
-          >
-            See everything we offer →
-          </Link>
+          icon-list pattern on dharmpathusa.com's homepage. Full-width band
+          like every other section on this page — no floating card, no
+          negative margin — so it doesn't overlap the CTA strip above it or
+          leave odd side gaps on narrow screens. */}
+      <section
+        className="px-4 py-14 text-center sm:px-6"
+        style={{ background: "var(--cream-card)" }}
+      >
+        <p className="text-xs font-bold tracking-wide text-orange-dark uppercase sm:text-sm">
+          Our Offerings at a Glance
+        </p>
+        <div className="mx-auto mt-5 grid max-w-4xl grid-cols-1 gap-x-10 gap-y-4 text-left sm:grid-cols-2">
+          {highlightOfferings.map((item) => (
+            <p key={item.title} className="text-sm text-foreground/85">
+              <span className="mr-1.5">{item.icon}</span>
+              <span className="font-semibold text-maroon">{item.title}</span>
+              <span className="text-foreground/60"> — {item.description}</span>
+            </p>
+          ))}
         </div>
-      </div>
+        <Link
+          href="/spiritual-seva"
+          className="mt-5 inline-block text-sm font-semibold text-orange-dark hover:underline"
+        >
+          See everything we offer →
+        </Link>
+      </section>
 
       {/* Why We Gather */}
       <section
