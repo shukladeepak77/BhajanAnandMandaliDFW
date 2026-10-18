@@ -7,8 +7,8 @@ export default function Hero() {
           "linear-gradient(135deg, #521515 0%, #6b1f1f 45%, #b85000 100%)",
       }}
     >
-      <div className="mx-auto max-w-3xl">
-        <h1 className="font-display text-3xl leading-tight font-bold text-white sm:text-5xl">
+      <div className="mx-auto max-w-4xl">
+        <h1 className="font-display text-3xl leading-tight font-bold text-white sm:text-5xl lg:text-6xl">
           Devotional Singing, Rooted in Bhakti
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-white/90 sm:text-base">

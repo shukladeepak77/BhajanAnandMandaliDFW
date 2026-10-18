@@ -49,30 +49,16 @@ export default function Home() {
       <Hero />
 
       {/* Badge card: poster + highlight offerings, mirrors the "501(c)(3)
-          NON-PROFIT" badge-card pattern on dharmpathusa.com's homepage */}
-      <div className="mx-auto -mt-10 max-w-3xl px-4 sm:px-6">
+          NON-PROFIT" badge-card pattern on dharmpathusa.com's homepage.
+          Two-column on larger screens so the tall poster pairs with the
+          text instead of forcing the whole section into a narrow column. */}
+      <div className="mx-auto -mt-10 max-w-6xl px-4 sm:px-6">
         <div
-          className="rounded-[22px] px-5 py-8 text-center shadow-[var(--shadow)] sm:px-10 sm:py-10"
+          className="rounded-[22px] px-5 py-8 shadow-[var(--shadow)] sm:px-10 sm:py-10 lg:px-14"
           style={{ background: "var(--cream-card)" }}
         >
-          <span
-            className="inline-block rounded-full px-4 py-1.5 text-xs font-bold tracking-wide text-white"
-            style={{ background: "var(--maroon)" }}
-          >
-            DFW AREA · TEXAS
-          </span>
-          <h2 className="font-display mt-4 text-2xl font-bold text-maroon sm:text-3xl">
-            Bhajan Anand Mandali
-          </h2>
-          <p className="font-devanagari mt-3 text-lg font-semibold text-maroon-dark">
-            भजन से आनंद, आनंद से भगवान
-          </p>
-          <p className="mt-1 text-xs text-foreground/60 italic sm:text-sm">
-            Bhajan se Anand, Anand se Bhagwan
-          </p>
-
-          <div className="mt-6 flex justify-center">
-            <div className="w-full max-w-[280px] overflow-hidden rounded-[18px] shadow-md">
+          <div className="grid grid-cols-1 items-center gap-10 text-center lg:grid-cols-[320px_1fr] lg:text-left">
+            <div className="mx-auto w-full max-w-[280px] overflow-hidden rounded-[18px] shadow-md lg:mx-0 lg:max-w-none">
               <Image
                 src="/images/poster.webp"
                 alt="Bhajan Anand Mandali — Keertan, Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang"
@@ -82,26 +68,44 @@ export default function Home() {
                 priority
               />
             </div>
-          </div>
 
-          <p className="mt-6 text-xs font-bold tracking-wide text-orange-dark uppercase sm:text-sm">
-            Our Offerings at a Glance
-          </p>
-          <div className="mx-auto mt-4 grid max-w-xl grid-cols-1 gap-x-6 gap-y-3 text-left sm:grid-cols-2">
-            {highlightOfferings.map((item) => (
-              <p key={item.title} className="text-sm text-foreground/85">
-                <span className="mr-1.5">{item.icon}</span>
-                <span className="font-semibold text-maroon">{item.title}</span>
-                <span className="text-foreground/60"> — {item.description}</span>
+            <div>
+              <span
+                className="inline-block rounded-full px-4 py-1.5 text-xs font-bold tracking-wide text-white"
+                style={{ background: "var(--maroon)" }}
+              >
+                DFW AREA · TEXAS
+              </span>
+              <h2 className="font-display mt-4 text-2xl font-bold text-maroon sm:text-3xl">
+                Bhajan Anand Mandali
+              </h2>
+              <p className="font-devanagari mt-3 text-lg font-semibold text-maroon-dark">
+                भजन से आनंद, आनंद से भगवान
               </p>
-            ))}
+              <p className="mt-1 text-xs text-foreground/60 italic sm:text-sm">
+                Bhajan se Anand, Anand se Bhagwan
+              </p>
+
+              <p className="mt-6 text-xs font-bold tracking-wide text-orange-dark uppercase sm:text-sm">
+                Our Offerings at a Glance
+              </p>
+              <div className="mt-4 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
+                {highlightOfferings.map((item) => (
+                  <p key={item.title} className="text-sm text-foreground/85">
+                    <span className="mr-1.5">{item.icon}</span>
+                    <span className="font-semibold text-maroon">{item.title}</span>
+                    <span className="text-foreground/60"> — {item.description}</span>
+                  </p>
+                ))}
+              </div>
+              <a
+                href="#what-we-do"
+                className="mt-5 inline-block text-sm font-semibold text-orange-dark hover:underline"
+              >
+                See everything we offer →
+              </a>
+            </div>
           </div>
-          <a
-            href="#what-we-do"
-            className="mt-5 inline-block text-sm font-semibold text-orange-dark hover:underline"
-          >
-            See everything we offer →
-          </a>
         </div>
       </div>
 
@@ -110,11 +114,11 @@ export default function Home() {
         className="mt-16 px-4 py-14 sm:px-6"
         style={{ background: "var(--cream-card)" }}
       >
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <p className="text-xs font-bold tracking-[0.15em] text-orange-dark uppercase">
             Why We Gather
           </p>
-          <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl">
+          <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl lg:text-4xl">
             Singing in Devotion, Uniting in Dharma
           </h2>
           <div
@@ -140,11 +144,11 @@ export default function Home() {
 
       {/* Our Values */}
       <section className="px-4 py-14 sm:px-6">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <p className="text-xs font-bold tracking-[0.15em] text-orange-dark uppercase">
             Our Values
           </p>
-          <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl">
+          <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl lg:text-4xl">
             The Spirit Behind Every Gathering
           </h2>
           <div
@@ -153,7 +157,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-2xl flex-col gap-6 text-left">
+        <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-8 text-left sm:grid-cols-3">
           {[
             {
               icon: "🕉️",
@@ -202,12 +206,12 @@ export default function Home() {
           className="scroll-mt-20 px-4 py-14 sm:px-6"
           style={{ background: idx % 2 === 0 ? "var(--cream-card)" : "var(--surface)" }}
         >
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-6xl">
             <div className="text-center">
               <p className="text-xs font-bold tracking-[0.15em] text-orange-dark uppercase">
                 {group.eyebrow}
               </p>
-              <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl">
+              <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl lg:text-4xl">
                 {group.title}
               </h2>
               <div
@@ -246,11 +250,11 @@ export default function Home() {
         className="scroll-mt-20 px-4 py-14 sm:px-6"
         style={{ background: "var(--cream-card)" }}
       >
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <p className="text-xs font-bold tracking-[0.15em] text-orange-dark uppercase">
             Invite Us
           </p>
-          <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl">
+          <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl lg:text-4xl">
             How to Invite Bhajan Anand Mandali
           </h2>
           <div
@@ -259,7 +263,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-xl flex-col gap-4">
+        <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
           {INVITE_STEPS.map((s) => (
             <div
               key={s.step}
@@ -283,10 +287,10 @@ export default function Home() {
       {/* Final CTA */}
       <section className="px-4 py-14 sm:px-6">
         <div
-          className="mx-auto max-w-3xl rounded-[22px] px-6 py-10 text-center shadow-[var(--shadow)] sm:px-10"
+          className="mx-auto max-w-4xl rounded-[22px] px-6 py-10 text-center shadow-[var(--shadow)] sm:px-10"
           style={{ background: "var(--cream-card)" }}
         >
-          <h2 className="font-display text-2xl font-bold text-maroon sm:text-3xl">
+          <h2 className="font-display text-2xl font-bold text-maroon sm:text-3xl lg:text-4xl">
             Invite Us · Connect With Us
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-foreground/75 sm:text-base">
@@ -316,12 +320,12 @@ export default function Home() {
 
       {/* FAQ */}
       <section id="faq" className="scroll-mt-20 px-4 py-14 sm:px-6">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-5xl">
           <div className="text-center">
             <p className="text-xs font-bold tracking-[0.15em] text-orange-dark uppercase">
               Good to Know
             </p>
-            <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl">
+            <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl lg:text-4xl">
               Frequently Asked
             </h2>
             <div
@@ -330,7 +334,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="mt-8 flex flex-col gap-4">
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {faqs.map((item) => (
               <div
                 key={item.question}
