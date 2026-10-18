@@ -6,4 +6,3 @@ export const SITE_OG_IMAGE = "/images/hero-banner.webp";
 export const GA_MEASUREMENT_ID = "";
 export const CONTACT_PHONE = "(214) 945-5080";
 export const CONTACT_PHONE_HREF = "+12149455080";
-export const WHATSAPP_URL = "https://wa.me/12149455080";

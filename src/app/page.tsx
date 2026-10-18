@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import { highlightOfferings, faqs } from "@/content/mandali";
-import { SITE_URL, CONTACT_PHONE, CONTACT_PHONE_HREF, WHATSAPP_URL } from "@/lib/site";
+import { SITE_URL, CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/site";
 
 const INVITE_STEPS = [
   {
@@ -70,7 +70,7 @@ export default function Home() {
             ))}
           </div>
           <Link
-            href="/services"
+            href="/spiritual-seva"
             className="mt-5 inline-block text-sm font-semibold text-orange-dark hover:underline"
           >
             See everything we offer →
@@ -167,18 +167,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services teaser — full listing now lives on its own page */}
+      {/* Spiritual Seva teaser — full listing now lives on its own page */}
       <section
-        id="what-we-do"
+        id="spiritual-seva"
         className="scroll-mt-20 px-4 py-14 text-center sm:px-6"
         style={{ background: "var(--cream-card)" }}
       >
         <div className="mx-auto max-w-4xl">
           <p className="text-xs font-bold tracking-[0.15em] text-orange-dark uppercase">
-            What We Do
+            Spiritual Seva
           </p>
           <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl lg:text-4xl">
-            Bhajan, Kirtan, Path &amp; Scripture Services
+            Bhajan, Kirtan, Path &amp; Scripture Seva
           </h2>
           <div
             className="mx-auto mt-3 h-1 w-14 rounded-full"
@@ -186,15 +186,15 @@ export default function Home() {
           />
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-foreground/80 sm:text-base">
             From Keertan and Bhajan Sandhya to Sundarkand Path and scripture
-            discourse sessions — see our full list of services, each
-            explained in detail, on a dedicated page.
+            discourse sessions — see our full Spiritual Seva offerings,
+            each explained in detail, on a dedicated page.
           </p>
           <Link
-            href="/services"
+            href="/spiritual-seva"
             className="mt-6 inline-block rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
             style={{ background: "var(--orange)" }}
           >
-            View All Services →
+            View Spiritual Seva →
           </Link>
         </div>
       </section>
@@ -252,22 +252,13 @@ export default function Home() {
             Whether it&apos;s a bhajan gathering, a scripture session, or a
             Sundarkand Path — we are here to serve with full devotion.
           </p>
-          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-6 flex items-center justify-center">
             <a
               href={`tel:${CONTACT_PHONE_HREF}`}
               className="rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
               style={{ background: "var(--orange)" }}
             >
               📞 Call {CONTACT_PHONE}
-            </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5"
-              style={{ background: "var(--maroon)" }}
-            >
-              💬 WhatsApp
             </a>
           </div>
         </div>

@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { offeringGroups } from "@/content/mandali";
-import { SITE_NAME, CONTACT_PHONE, CONTACT_PHONE_HREF, WHATSAPP_URL } from "@/lib/site";
+import { SITE_NAME, CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "Spiritual Seva",
   description:
     "Every bhajan, kirtan and scripture service Bhajan Anand Mandali offers — Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Akhand RamCharitManas Path, Hanuman Chalisa Path, Naam Jap, Satsang, and scripture discourse sessions — for homes and community gatherings across the DFW area, Texas.",
 };
 
-export default function ServicesPage() {
+export default function SpiritualSevaPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -40,10 +40,10 @@ export default function ServicesPage() {
           <Link href="/" className="hover:text-gold hover:underline">
             Home
           </Link>{" "}
-          / Services
+          / Spiritual Seva
         </p>
         <h1 className="font-display mt-3 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-          Our Services
+          Spiritual Seva
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/90 sm:text-base">
           Devotional singing, recitation and scripture sessions — brought
@@ -56,7 +56,7 @@ export default function ServicesPage() {
       {offeringGroups.map((group, idx) => (
         <section
           key={group.title}
-          id={idx === 0 ? "what-we-do" : "discourse"}
+          id={idx === 0 ? "spiritual-seva" : "discourse"}
           className="scroll-mt-20 px-4 py-14 sm:px-6"
           style={{ background: idx % 2 === 0 ? "var(--cream-card)" : "var(--surface)" }}
         >
@@ -111,22 +111,13 @@ export default function ServicesPage() {
             Whether it&apos;s a bhajan gathering, a scripture session, or a
             Sundarkand Path — we are here to serve with full devotion.
           </p>
-          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-6 flex items-center justify-center">
             <a
               href={`tel:${CONTACT_PHONE_HREF}`}
               className="rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
               style={{ background: "var(--orange)" }}
             >
               📞 Call {CONTACT_PHONE}
-            </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5"
-              style={{ background: "var(--maroon)" }}
-            >
-              💬 WhatsApp
             </a>
           </div>
           <Link

@@ -1,8 +1,8 @@
-import { CONTACT_PHONE, CONTACT_PHONE_HREF, WHATSAPP_URL } from "@/lib/site";
+import { CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/site";
 
 const QUICK_LINKS = [
-  { label: "Services", href: "/services" },
-  { label: "Scripture & Discourse", href: "/services#discourse" },
+  { label: "Spiritual Seva", href: "/spiritual-seva" },
+  { label: "Scripture & Discourse", href: "/spiritual-seva#discourse" },
   { label: "Invite Us", href: "/#invite" },
   { label: "FAQ", href: "/#faq" },
 ];
@@ -45,14 +45,6 @@ export default function Footer() {
             <div className="mt-3 flex flex-col gap-2 text-sm text-white/60">
               <a href={`tel:${CONTACT_PHONE_HREF}`} className="hover:text-gold">
                 📞 {CONTACT_PHONE}
-              </a>
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gold"
-              >
-                💬 WhatsApp
               </a>
               <span>📍 DFW Area, Texas</span>
             </div>

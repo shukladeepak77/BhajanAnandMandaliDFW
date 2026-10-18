@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CONTACT_PHONE, CONTACT_PHONE_HREF, WHATSAPP_URL } from "@/lib/site";
+import { CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/site";
 
 export default function Header() {
   return (
@@ -17,7 +17,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main header — gold gradient, logo badge, WhatsApp CTA */}
+      {/* Main header — gold gradient, logo badge, Call CTA */}
       <header
         id="site-header"
         className="sticky top-0 z-20 shadow-[0_2px_16px_rgba(107,31,31,0.25)]"
@@ -61,8 +61,8 @@ export default function Header() {
               <Link href="/" className="hover:text-maroon" style={{ color: "var(--maroon-dark)" }}>
                 Home
               </Link>
-              <Link href="/services" className="hover:text-maroon" style={{ color: "var(--maroon-dark)" }}>
-                Services
+              <Link href="/spiritual-seva" className="hover:text-maroon" style={{ color: "var(--maroon-dark)" }}>
+                Spiritual Seva
               </Link>
               <a href="/#invite" className="hover:text-maroon" style={{ color: "var(--maroon-dark)" }}>
                 Invite Us
@@ -70,13 +70,11 @@ export default function Header() {
             </nav>
 
             <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`tel:${CONTACT_PHONE_HREF}`}
               className="rounded-[10px] px-3 py-2 text-xs font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 sm:px-4 sm:text-sm"
               style={{ background: "var(--maroon)" }}
             >
-              💬 WhatsApp
+              📞 {CONTACT_PHONE}
             </a>
           </div>
         </div>

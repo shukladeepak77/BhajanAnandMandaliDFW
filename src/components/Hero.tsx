@@ -29,11 +29,11 @@ export default function Hero() {
       >
         <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-3 sm:flex-row">
           <a
-            href="#what-we-do"
+            href="#spiritual-seva"
             className="rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
             style={{ background: "var(--orange)" }}
           >
-            What We Do
+            Spiritual Seva
           </a>
           <a
             href="#invite"
