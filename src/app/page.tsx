@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "@/components/Hero";
 import { offeringGroups, highlightOfferings, faqs } from "@/content/mandali";
 import { SITE_URL, CONTACT_PHONE, CONTACT_PHONE_HREF, WHATSAPP_URL } from "@/lib/site";
@@ -48,64 +47,33 @@ export default function Home() {
 
       <Hero />
 
-      {/* Badge card: poster + highlight offerings, mirrors the "501(c)(3)
-          NON-PROFIT" badge-card pattern on dharmpathusa.com's homepage.
-          Two-column on larger screens so the tall poster pairs with the
-          text instead of forcing the whole section into a narrow column. */}
-      <div className="mx-auto -mt-10 max-w-6xl px-4 sm:px-6">
+      {/* Offerings-at-a-glance card: the banner above already carries the
+          title/tagline/contact visually, so this card's job is just the
+          quick-reference offering descriptions, mirrors the "OUR MISSION"
+          icon-list pattern on dharmpathusa.com's homepage. */}
+      <div className="mx-auto -mt-8 max-w-6xl px-4 sm:px-6">
         <div
-          className="rounded-[22px] px-5 py-8 shadow-[var(--shadow)] sm:px-10 sm:py-10 lg:px-14"
+          className="rounded-[22px] px-5 py-8 text-center shadow-[var(--shadow)] sm:px-10 sm:py-10"
           style={{ background: "var(--cream-card)" }}
         >
-          <div className="grid grid-cols-1 items-center gap-10 text-center lg:grid-cols-[320px_1fr] lg:text-left">
-            <div className="mx-auto w-full max-w-[280px] overflow-hidden rounded-[18px] shadow-md lg:mx-0 lg:max-w-none">
-              <Image
-                src="/images/poster.webp"
-                alt="Bhajan Anand Mandali — Keertan, Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang"
-                width={1080}
-                height={1920}
-                className="h-auto w-full"
-                priority
-              />
-            </div>
-
-            <div>
-              <span
-                className="inline-block rounded-full px-4 py-1.5 text-xs font-bold tracking-wide text-white"
-                style={{ background: "var(--maroon)" }}
-              >
-                DFW AREA · TEXAS
-              </span>
-              <h2 className="font-display mt-4 text-2xl font-bold text-maroon sm:text-3xl">
-                Bhajan Anand Mandali
-              </h2>
-              <p className="font-devanagari mt-3 text-lg font-semibold text-maroon-dark">
-                भजन से आनंद, आनंद से भगवान
+          <p className="text-xs font-bold tracking-wide text-orange-dark uppercase sm:text-sm">
+            Our Offerings at a Glance
+          </p>
+          <div className="mx-auto mt-5 grid max-w-4xl grid-cols-1 gap-x-10 gap-y-4 text-left sm:grid-cols-2">
+            {highlightOfferings.map((item) => (
+              <p key={item.title} className="text-sm text-foreground/85">
+                <span className="mr-1.5">{item.icon}</span>
+                <span className="font-semibold text-maroon">{item.title}</span>
+                <span className="text-foreground/60"> — {item.description}</span>
               </p>
-              <p className="mt-1 text-xs text-foreground/60 italic sm:text-sm">
-                Bhajan se Anand, Anand se Bhagwan
-              </p>
-
-              <p className="mt-6 text-xs font-bold tracking-wide text-orange-dark uppercase sm:text-sm">
-                Our Offerings at a Glance
-              </p>
-              <div className="mt-4 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
-                {highlightOfferings.map((item) => (
-                  <p key={item.title} className="text-sm text-foreground/85">
-                    <span className="mr-1.5">{item.icon}</span>
-                    <span className="font-semibold text-maroon">{item.title}</span>
-                    <span className="text-foreground/60"> — {item.description}</span>
-                  </p>
-                ))}
-              </div>
-              <a
-                href="#what-we-do"
-                className="mt-5 inline-block text-sm font-semibold text-orange-dark hover:underline"
-              >
-                See everything we offer →
-              </a>
-            </div>
+            ))}
           </div>
+          <a
+            href="#what-we-do"
+            className="mt-5 inline-block text-sm font-semibold text-orange-dark hover:underline"
+          >
+            See everything we offer →
+          </a>
         </div>
       </div>
 

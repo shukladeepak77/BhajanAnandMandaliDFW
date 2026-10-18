@@ -1,24 +1,33 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
-    <section
-      className="px-4 py-14 text-center sm:px-6 sm:py-20"
-      style={{
-        background:
-          "linear-gradient(135deg, #521515 0%, #6b1f1f 45%, #b85000 100%)",
-      }}
-    >
-      <div className="mx-auto max-w-4xl">
-        <h1 className="font-display text-3xl leading-tight font-bold text-white sm:text-5xl lg:text-6xl">
-          Devotional Singing, Rooted in Bhakti
+    <section>
+      {/* Full-width banner — the group's own artwork carries the title,
+          tagline, offerings and contact info visually. */}
+      <div className="relative w-full overflow-hidden">
+        <Image
+          src="/images/hero-banner.webp"
+          alt="Bhajan Anand Mandali — DFW Area, Texas. Bhajan se Anand, Anand se Bhagwan. Keertan, Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang. Invite us to your home for Keertan. (214) 945-5080 · WhatsApp."
+          width={1920}
+          height={1080}
+          className="h-auto w-full"
+          priority
+        />
+        {/* Visually hidden heading — the banner image carries this text
+            visually, but search engines and screen readers need real text. */}
+        <h1 className="sr-only">
+          Bhajan Anand Mandali — Devotional Singing, Rooted in Bhakti, DFW
+          Area, Texas
         </h1>
-        <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-white/90 sm:text-base">
-          <span className="font-semibold text-gold">Bhajan Anand Mandali</span>{" "}
-          brings Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path,
-          Naam Jap and Satsang to homes and community gatherings across the
-          DFW area, Texas — singing in devotion, uniting the community.
-        </p>
+      </div>
 
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      {/* CTA strip below the banner */}
+      <div
+        className="px-4 py-6 text-center sm:px-6"
+        style={{ background: "var(--maroon)" }}
+      >
+        <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href="#what-we-do"
             className="rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
@@ -33,10 +42,6 @@ export default function Hero() {
             Invite Us
           </a>
         </div>
-
-        <p className="mt-6 text-xs text-white/70 sm:text-sm">
-          🙏 Serving the DFW community with devotion
-        </p>
       </div>
     </section>
   );
