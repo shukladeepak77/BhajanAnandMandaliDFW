@@ -43,14 +43,15 @@ export default function Hero() {
         <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-3 sm:flex-row">
           <Link
             href="/spiritual-seva"
-            className="rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
+            className="rounded-full px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
             style={{ background: "var(--orange)" }}
           >
             Spiritual Seva
           </Link>
           <a
             href="#invite"
-            className="rounded-[10px] border border-white/60 px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:bg-white/10"
+            className="rounded-full px-6 py-3 text-sm font-semibold shadow-md transition-transform hover:-translate-y-0.5"
+            style={{ background: "var(--gold)", color: "var(--maroon-dark)" }}
           >
             Invite Us
           </a>
