@@ -18,7 +18,7 @@ export default function Footer() {
             </p>
             <p className="mt-3 text-sm leading-relaxed text-white/60">
               A community of devotional singing — Keertan, Bhajan Sandhya,
-              Mata Ki Chowki, Sundarkand Path, Naam Jap, Satsang and
+              Mata Ki Chowki, Sundarkand Path, Satsang and
               scripture sessions — serving the DFW area, Texas.
             </p>
           </div>

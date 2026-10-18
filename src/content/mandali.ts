@@ -15,12 +15,13 @@ export type OfferingGroup = {
 // dharmpathusa.com/spiritual-seva ("Path & Bhakti Events" and
 // "Discourses & Sessions"): Group 1 = the group's own poster items
 // (Keertan, Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang)
-// plus the remaining Path & Bhakti Events items from that page (Akhand
-// RamCharitManas Path, Naam Jap). Group 2 = every Discourses & Sessions
-// item from that page (Shree Ram Charit Manas, Bhagwad Gita, Upanishads).
-// Hanuman Chalisa Path is intentionally not a separate listing — per
+// plus Akhand RamCharitManas Path from that page's Path & Bhakti Events
+// list. Group 2 = every Discourses & Sessions item from that page
+// (Shree Ram Charit Manas, Bhagwad Gita, Upanishads). Hanuman Chalisa
+// Path and Naam Jap are intentionally not separate listings — per
 // explicit instruction, Hanuman Chalisa is recited as part of Sundarkand
-// Path itself, not offered as its own standalone service.
+// Path itself, and Naam Jap is not offered as its own standalone
+// service.
 export const offeringGroups: OfferingGroup[] = [
   {
     eyebrow: "WHAT WE DO",
@@ -57,12 +58,6 @@ export const offeringGroups: OfferingGroup[] = [
         title: "Akhand RamCharitManas Path",
         description:
           "Continuous, uninterrupted recitation of the Ramcharitmanas for auspicious occasions, family gatherings and divine blessings.",
-      },
-      {
-        icon: "🧘",
-        title: "Naam Jap",
-        description:
-          "Guided group mantra jap sessions covering sacred mantras and shlokas, with correct uccharan and meaning explained.",
       },
       {
         icon: "🕉️",
@@ -112,7 +107,7 @@ export const faqs: FaqItem[] = [
   {
     question: "What does Bhajan Anand Mandali do?",
     answer:
-      "We bring devotional singing — Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Naam Jap, Satsang and more — to homes and community gatherings across the DFW area, Texas.",
+      "We bring devotional singing — Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Satsang and more — to homes and community gatherings across the DFW area, Texas.",
   },
   {
     question: "Can we invite the mandali to our home or event?",

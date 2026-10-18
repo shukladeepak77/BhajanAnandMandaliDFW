@@ -50,7 +50,6 @@ export const metadata: Metadata = {
     "Keertan DFW",
     "Sundarkand Path Texas",
     "Satsang Dallas Fort Worth",
-    "Naam Jap DFW",
   ],
   category: "religion",
   alternates: {

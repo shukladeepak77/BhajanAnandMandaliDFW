@@ -8,7 +8,7 @@ const INVITE_STEPS = [
     step: "STEP 1",
     title: "Choose Your Gathering",
     description:
-      "Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Naam Jap, Satsang, or a scripture session.",
+      "Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Satsang, or a scripture session.",
   },
   {
     step: "STEP 2",
