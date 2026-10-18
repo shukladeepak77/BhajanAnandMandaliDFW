@@ -57,6 +57,18 @@ export default function Header() {
               </span>
             </Link>
 
+            <nav className="hidden items-center gap-6 text-sm font-semibold sm:flex">
+              <Link href="/" className="hover:text-maroon" style={{ color: "var(--maroon-dark)" }}>
+                Home
+              </Link>
+              <Link href="/services" className="hover:text-maroon" style={{ color: "var(--maroon-dark)" }}>
+                Services
+              </Link>
+              <a href="/#invite" className="hover:text-maroon" style={{ color: "var(--maroon-dark)" }}>
+                Invite Us
+              </a>
+            </nav>
+
             <a
               href={WHATSAPP_URL}
               target="_blank"

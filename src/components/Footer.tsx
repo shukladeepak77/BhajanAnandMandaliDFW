@@ -1,10 +1,10 @@
 import { CONTACT_PHONE, CONTACT_PHONE_HREF, WHATSAPP_URL } from "@/lib/site";
 
 const QUICK_LINKS = [
-  { label: "What We Do", href: "#what-we-do" },
-  { label: "Scripture & Discourse", href: "#discourse" },
-  { label: "Invite Us", href: "#invite" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Services", href: "/services" },
+  { label: "Scripture & Discourse", href: "/services#discourse" },
+  { label: "Invite Us", href: "/#invite" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 export default function Footer() {

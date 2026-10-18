@@ -1,5 +1,6 @@
+import Link from "next/link";
 import Hero from "@/components/Hero";
-import { offeringGroups, highlightOfferings, faqs } from "@/content/mandali";
+import { highlightOfferings, faqs } from "@/content/mandali";
 import { SITE_URL, CONTACT_PHONE, CONTACT_PHONE_HREF, WHATSAPP_URL } from "@/lib/site";
 
 const INVITE_STEPS = [
@@ -68,12 +69,12 @@ export default function Home() {
               </p>
             ))}
           </div>
-          <a
-            href="#what-we-do"
+          <Link
+            href="/services"
             className="mt-5 inline-block text-sm font-semibold text-orange-dark hover:underline"
           >
             See everything we offer →
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -166,51 +167,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What We Do / Scripture groups */}
-      {offeringGroups.map((group, idx) => (
-        <section
-          key={group.title}
-          id={idx === 0 ? "what-we-do" : "discourse"}
-          className="scroll-mt-20 px-4 py-14 sm:px-6"
-          style={{ background: idx % 2 === 0 ? "var(--cream-card)" : "var(--surface)" }}
-        >
-          <div className="mx-auto max-w-6xl">
-            <div className="text-center">
-              <p className="text-xs font-bold tracking-[0.15em] text-orange-dark uppercase">
-                {group.eyebrow}
-              </p>
-              <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl lg:text-4xl">
-                {group.title}
-              </h2>
-              <div
-                className="mx-auto mt-3 h-1 w-14 rounded-full"
-                style={{ background: "var(--orange)" }}
-              />
-              <p className="mx-auto mt-4 max-w-2xl text-sm text-foreground/70 sm:text-base">
-                {group.blurb}
-              </p>
-            </div>
-
-            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {group.items.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-[18px] px-5 py-6 shadow-[var(--shadow)]"
-                  style={{ background: "var(--surface)" }}
-                >
-                  <div className="text-3xl">{item.icon}</div>
-                  <h3 className="font-display mt-3 text-base font-bold text-maroon">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-foreground/75">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      ))}
+      {/* Services teaser — full listing now lives on its own page */}
+      <section
+        id="what-we-do"
+        className="scroll-mt-20 px-4 py-14 text-center sm:px-6"
+        style={{ background: "var(--cream-card)" }}
+      >
+        <div className="mx-auto max-w-4xl">
+          <p className="text-xs font-bold tracking-[0.15em] text-orange-dark uppercase">
+            What We Do
+          </p>
+          <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl lg:text-4xl">
+            Bhajan, Kirtan, Path &amp; Scripture Services
+          </h2>
+          <div
+            className="mx-auto mt-3 h-1 w-14 rounded-full"
+            style={{ background: "var(--orange)" }}
+          />
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-foreground/80 sm:text-base">
+            From Keertan and Bhajan Sandhya to Sundarkand Path and scripture
+            discourse sessions — see our full list of services, each
+            explained in detail, on a dedicated page.
+          </p>
+          <Link
+            href="/services"
+            className="mt-6 inline-block rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
+            style={{ background: "var(--orange)" }}
+          >
+            View All Services →
+          </Link>
+        </div>
+      </section>
 
       {/* How to Invite Us */}
       <section
