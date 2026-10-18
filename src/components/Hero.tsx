@@ -7,7 +7,7 @@ export default function Hero() {
           tagline, offerings and contact info visually. */}
       <div className="relative w-full overflow-hidden">
         <Image
-          src="/images/hero-banner.webp"
+          src="/images/hero-banner-v2.webp"
           alt="Bhajan Anand Mandali — DFW Area, Texas. Bhajan se Anand, Anand se Bhagwan. Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang/Keertan. Invite Us, Ignite Devotion. (214) 945-5080 · WhatsApp/Text/Call."
           width={1920}
           height={1080}
