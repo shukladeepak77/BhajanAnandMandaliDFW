@@ -16,9 +16,10 @@ export default function Footer() {
               Bhajan Anand Mandali
             </p>
             <p className="mt-3 text-sm leading-relaxed text-white/60">
-              A community of devotional singing — Keertan, Bhajan Sandhya,
-              Mata Ki Chowki, Sundarkand Path, Akhand RamCharitManas Path
-              and Satsang — serving the DFW area, Texas.
+              A community of devotional singing — Mata Ka Jagran, Bhajan
+              Sandhya, Mata Ki Chowki, Sundarkand Path, Akhand
+              RamCharitManas Path and Satsang — serving the DFW area,
+              Texas.
             </p>
           </div>
 

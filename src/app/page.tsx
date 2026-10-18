@@ -8,7 +8,7 @@ const INVITE_STEPS = [
     step: "STEP 1",
     title: "Choose Your Gathering",
     description:
-      "Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, or Satsang.",
+      "Mata Ka Jagran, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, or Satsang.",
   },
   {
     step: "STEP 2",
@@ -185,7 +185,7 @@ export default function Home() {
             style={{ background: "var(--orange)" }}
           />
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-foreground/80 sm:text-base">
-            From Keertan and Bhajan Sandhya to Sundarkand Path and Akhand
+            From Mata Ka Jagran and Bhajan Sandhya to Sundarkand Path and Akhand
             RamCharitManas Path — see our full Spiritual Seva offerings,
             each explained in detail, on a dedicated page.
           </p>

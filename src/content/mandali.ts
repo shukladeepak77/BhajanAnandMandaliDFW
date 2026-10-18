@@ -12,12 +12,13 @@ export type OfferingGroup = {
 };
 
 // One group for now, mirroring dharmpathusa.com/spiritual-seva's "Path &
-// Bhakti Events" list: the group's own poster items (Keertan, Bhajan
-// Sandhya, Mata ki Chowki, Sundarkand Path, Satsang) plus Akhand
-// RamCharitManas Path from that same list. Hanuman Chalisa Path and Naam
-// Jap are intentionally not separate listings — per explicit instruction,
-// Hanuman Chalisa is recited as part of Sundarkand Path itself, and Naam
-// Jap is not offered as its own standalone service.
+// Bhakti Events" list: the group's own poster items (originally Keertan,
+// Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang — Keertan was
+// later replaced with Mata Ka Jagran per explicit instruction) plus
+// Akhand RamCharitManas Path from that same list. Hanuman Chalisa Path
+// and Naam Jap are intentionally not separate listings — per explicit
+// instruction, Hanuman Chalisa is recited as part of Sundarkand Path
+// itself, and Naam Jap is not offered as its own standalone service.
 //
 // A second "Scripture & Discourse" group (Shree Ram Charit Manas, Bhagwad
 // Gita, Upanishads — mirroring that page's "Discourses & Sessions" list)
@@ -34,9 +35,9 @@ export const offeringGroups: OfferingGroup[] = [
     items: [
       {
         icon: "🙏",
-        title: "Keertan",
+        title: "Mata Ka Jagran",
         description:
-          "Group kirtan — call-and-response devotional chanting with dhol, harmonium and taal, open to all voices and all levels.",
+          "An overnight devotional vigil in reverence of Mata — group kirtan and bhajans with dhol, harmonium and taal through the night, open to all voices and all levels.",
       },
       {
         icon: "🎶",
@@ -84,7 +85,7 @@ export const faqs: FaqItem[] = [
   {
     question: "What does Bhajan Anand Mandali do?",
     answer:
-      "We bring devotional singing — Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Satsang and more — to homes and community gatherings across the DFW area, Texas.",
+      "We bring devotional singing — Mata Ka Jagran, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Satsang and more — to homes and community gatherings across the DFW area, Texas.",
   },
   {
     question: "Can we invite the mandali to our home or event?",

@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     "Hindu bhajan kirtan Texas",
     "Bhajan Sandhya DFW",
     "Mata Ki Chowki Dallas",
-    "Keertan DFW",
+    "Mata Ka Jagran DFW",
     "Sundarkand Path Texas",
     "Satsang Dallas Fort Worth",
   ],
