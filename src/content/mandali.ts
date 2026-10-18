@@ -15,11 +15,12 @@ export type OfferingGroup = {
 // dharmpathusa.com/spiritual-seva ("Path & Bhakti Events" and
 // "Discourses & Sessions"): Group 1 = the group's own poster items
 // (Keertan, Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang)
-// plus every remaining Path & Bhakti Events item from that page (Akhand
-// RamCharitManas Path, Hanuman Chalisa Path, Naam Jap). Group 2 = every
-// Discourses & Sessions item from that page (Shree Ram Charit Manas,
-// Bhagwad Gita, Upanishads). Per explicit instruction, every service
-// listed on that page is represented here, not a subset.
+// plus the remaining Path & Bhakti Events items from that page (Akhand
+// RamCharitManas Path, Naam Jap). Group 2 = every Discourses & Sessions
+// item from that page (Shree Ram Charit Manas, Bhagwad Gita, Upanishads).
+// Hanuman Chalisa Path is intentionally not a separate listing — per
+// explicit instruction, Hanuman Chalisa is recited as part of Sundarkand
+// Path itself, not offered as its own standalone service.
 export const offeringGroups: OfferingGroup[] = [
   {
     eyebrow: "WHAT WE DO",
@@ -49,19 +50,13 @@ export const offeringGroups: OfferingGroup[] = [
         icon: "📿",
         title: "Sundarkand Path",
         description:
-          "Devotional recitation from Ramcharitmanas — sankalp, path and concluding aarti for peace, protection and positive energy.",
+          "Devotional recitation from Ramcharitmanas, including Hanuman Chalisa — sankalp, path and concluding aarti for peace, protection and positive energy.",
       },
       {
         icon: "📖",
         title: "Akhand RamCharitManas Path",
         description:
           "Continuous, uninterrupted recitation of the Ramcharitmanas for auspicious occasions, family gatherings and divine blessings.",
-      },
-      {
-        icon: "🐒",
-        title: "Hanuman Chalisa Path",
-        description:
-          "Group recitation of Hanuman Chalisa with dhyan, path and concluding prayers for strength and devotion.",
       },
       {
         icon: "🧘",

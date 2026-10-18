@@ -51,7 +51,6 @@ export const metadata: Metadata = {
     "Sundarkand Path Texas",
     "Satsang Dallas Fort Worth",
     "Naam Jap DFW",
-    "Hanuman Chalisa Path Texas",
   ],
   category: "religion",
   alternates: {
