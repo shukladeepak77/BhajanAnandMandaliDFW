@@ -2,7 +2,6 @@ import { CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/site";
 
 const QUICK_LINKS = [
   { label: "Spiritual Seva", href: "/spiritual-seva" },
-  { label: "Scripture & Discourse", href: "/spiritual-seva#discourse" },
   { label: "Invite Us", href: "/#invite" },
   { label: "FAQ", href: "/#faq" },
 ];
@@ -18,8 +17,8 @@ export default function Footer() {
             </p>
             <p className="mt-3 text-sm leading-relaxed text-white/60">
               A community of devotional singing — Keertan, Bhajan Sandhya,
-              Mata Ki Chowki, Sundarkand Path, Satsang and
-              scripture sessions — serving the DFW area, Texas.
+              Mata Ki Chowki, Sundarkand Path, Akhand RamCharitManas Path
+              and Satsang — serving the DFW area, Texas.
             </p>
           </div>
 

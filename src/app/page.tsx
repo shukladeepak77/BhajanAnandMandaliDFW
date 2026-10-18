@@ -8,7 +8,7 @@ const INVITE_STEPS = [
     step: "STEP 1",
     title: "Choose Your Gathering",
     description:
-      "Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Satsang, or a scripture session.",
+      "Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, or Satsang.",
   },
   {
     step: "STEP 2",
@@ -178,15 +178,15 @@ export default function Home() {
             Spiritual Seva
           </p>
           <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl lg:text-4xl">
-            Bhajan, Kirtan, Path &amp; Scripture Seva
+            Bhajan, Kirtan &amp; Path Seva
           </h2>
           <div
             className="mx-auto mt-3 h-1 w-14 rounded-full"
             style={{ background: "var(--orange)" }}
           />
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-foreground/80 sm:text-base">
-            From Keertan and Bhajan Sandhya to Sundarkand Path and scripture
-            discourse sessions — see our full Spiritual Seva offerings,
+            From Keertan and Bhajan Sandhya to Sundarkand Path and Akhand
+            RamCharitManas Path — see our full Spiritual Seva offerings,
             each explained in detail, on a dedicated page.
           </p>
           <Link
@@ -249,8 +249,8 @@ export default function Home() {
             Invite Us · Connect With Us
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-foreground/75 sm:text-base">
-            Whether it&apos;s a bhajan gathering, a scripture session, or a
-            Sundarkand Path — we are here to serve with full devotion.
+            Whether it&apos;s a bhajan gathering or a Sundarkand Path — we
+            are here to serve with full devotion.
           </p>
           <div className="mt-6 flex items-center justify-center">
             <a

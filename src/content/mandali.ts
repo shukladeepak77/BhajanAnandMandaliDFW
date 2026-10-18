@@ -11,17 +11,20 @@ export type OfferingGroup = {
   items: Offering[];
 };
 
-// Two groups, mirroring the exact split used on
-// dharmpathusa.com/spiritual-seva ("Path & Bhakti Events" and
-// "Discourses & Sessions"): Group 1 = the group's own poster items
-// (Keertan, Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang)
-// plus Akhand RamCharitManas Path from that page's Path & Bhakti Events
-// list. Group 2 = every Discourses & Sessions item from that page
-// (Shree Ram Charit Manas, Bhagwad Gita, Upanishads). Hanuman Chalisa
-// Path and Naam Jap are intentionally not separate listings — per
-// explicit instruction, Hanuman Chalisa is recited as part of Sundarkand
-// Path itself, and Naam Jap is not offered as its own standalone
-// service.
+// One group for now, mirroring dharmpathusa.com/spiritual-seva's "Path &
+// Bhakti Events" list: the group's own poster items (Keertan, Bhajan
+// Sandhya, Mata ki Chowki, Sundarkand Path, Satsang) plus Akhand
+// RamCharitManas Path from that same list. Hanuman Chalisa Path and Naam
+// Jap are intentionally not separate listings — per explicit instruction,
+// Hanuman Chalisa is recited as part of Sundarkand Path itself, and Naam
+// Jap is not offered as its own standalone service.
+//
+// A second "Scripture & Discourse" group (Shree Ram Charit Manas, Bhagwad
+// Gita, Upanishads — mirroring that page's "Discourses & Sessions" list)
+// existed here and was removed for now, per explicit instruction ("will
+// add them later") — not dropped for any content reason. Re-add as a
+// second entry in offeringGroups when ready; see git history for the
+// exact prior wording.
 export const offeringGroups: OfferingGroup[] = [
   {
     eyebrow: "WHAT WE DO",
@@ -64,32 +67,6 @@ export const offeringGroups: OfferingGroup[] = [
         title: "Satsang",
         description:
           "Gatherings of devotional singing, reflection and fellowship — bringing the community together in a spirit of bhakti.",
-      },
-    ],
-  },
-  {
-    eyebrow: "SCRIPTURE & DISCOURSE",
-    title: "Sacred Texts & Devotional Practices",
-    blurb:
-      "Sessions on Sanatan scriptures woven alongside our bhajan and kirtan gatherings.",
-    items: [
-      {
-        icon: "📜",
-        title: "Shree Ram Charit Manas",
-        description:
-          "Study of Tulsidas's Avadhi masterpiece — Chaupais, Dohas, Chhands and Sorthas explored with translation, meaning and commentary.",
-      },
-      {
-        icon: "🌸",
-        title: "Bhagwad Gita",
-        description:
-          "Chapter-wise exploration of karma, dharma, bhakti and jnana — the eternal dialogue between Arjuna and Krishna.",
-      },
-      {
-        icon: "🔔",
-        title: "Upanishads",
-        description:
-          "Selected study of key Upanishads — exploring Brahman, Atman, consciousness and the mahavakyas.",
       },
     ],
   },

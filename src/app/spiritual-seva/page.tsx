@@ -6,7 +6,7 @@ import { SITE_NAME, CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Spiritual Seva",
   description:
-    "Every bhajan, kirtan and scripture service Bhajan Anand Mandali offers — Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Akhand RamCharitManas Path, Satsang, and scripture discourse sessions — for homes and community gatherings across the DFW area, Texas.",
+    "Every bhajan and kirtan service Bhajan Anand Mandali offers — Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Akhand RamCharitManas Path, and Satsang — for homes and community gatherings across the DFW area, Texas.",
 };
 
 export default function SpiritualSevaPage() {
@@ -46,9 +46,9 @@ export default function SpiritualSevaPage() {
           Spiritual Seva
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/90 sm:text-base">
-          Devotional singing, recitation and scripture sessions — brought
-          to your home or community gathering across the DFW area, Texas,
-          with full devotion and care.
+          Devotional singing and recitation — brought to your home or
+          community gathering across the DFW area, Texas, with full
+          devotion and care.
         </p>
       </div>
 
@@ -108,8 +108,8 @@ export default function SpiritualSevaPage() {
             Invite Us · Connect With Us
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-foreground/75 sm:text-base">
-            Whether it&apos;s a bhajan gathering, a scripture session, or a
-            Sundarkand Path — we are here to serve with full devotion.
+            Whether it&apos;s a bhajan gathering or a Sundarkand Path — we
+            are here to serve with full devotion.
           </p>
           <div className="mt-6 flex items-center justify-center">
             <a
