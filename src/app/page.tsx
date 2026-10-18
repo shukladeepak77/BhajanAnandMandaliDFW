@@ -142,9 +142,9 @@ export default function Home() {
             },
             {
               icon: "🙏",
-              title: "Open to All",
+              title: "By Invitation",
               description:
-                "Every gathering we lead welcomes anyone who wishes to listen, sing along, or simply be present.",
+                "We bring devotional singing to homes and community gatherings by invitation — once there, everyone present is welcome to listen, sing along, or simply be present.",
             },
           ].map((value) => (
             <div key={value.title} className="flex items-start gap-4">
