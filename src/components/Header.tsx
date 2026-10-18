@@ -62,7 +62,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-[10px] px-3 py-2 text-xs font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 sm:px-4 sm:text-sm"
-              style={{ background: "#25D366" }}
+              style={{ background: "var(--maroon)" }}
             >
               💬 WhatsApp
             </a>

@@ -278,7 +278,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5"
-              style={{ background: "#25D366" }}
+              style={{ background: "var(--maroon)" }}
             >
               💬 WhatsApp
             </a>
