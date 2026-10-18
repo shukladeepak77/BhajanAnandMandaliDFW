@@ -9,11 +9,8 @@ export default function Header() {
         className="hidden sm:block"
         style={{ background: "var(--maroon)" }}
       >
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-xs text-white/90 sm:px-6">
+        <div className="mx-auto max-w-6xl px-4 py-2 text-center text-xs text-white/90 sm:px-6">
           <span>🕉️ Devotional Singing · Seva with Bhakti · DFW, Texas</span>
-          <a href={`tel:${CONTACT_PHONE_HREF}`} className="hover:text-gold">
-            📞 {CONTACT_PHONE}
-          </a>
         </div>
       </div>
 
