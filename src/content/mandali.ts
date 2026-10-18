@@ -40,16 +40,16 @@ export const offeringGroups: OfferingGroup[] = [
           "An overnight devotional vigil in reverence of Mata — group kirtan and bhajans with dhol, harmonium and taal through the night, open to all voices and all levels.",
       },
       {
-        icon: "🎶",
-        title: "Bhajan Sandhya",
-        description:
-          "A soul-stirring evening of devotional bhajans and sankirtan — group singing in devotion, for home or community gatherings.",
-      },
-      {
         icon: "🪔",
         title: "Mata Ki Chowki",
         description:
           "Devotional gatherings in reverence of Mata — uplifting evenings of bhajan and bhakti, open to all.",
+      },
+      {
+        icon: "🎶",
+        title: "Bhajan Sandhya",
+        description:
+          "A soul-stirring evening of devotional bhajans and sankirtan — group singing in devotion, for home or community gatherings.",
       },
       {
         icon: "📿",
