@@ -54,14 +54,26 @@ export default function Header() {
               </span>
             </Link>
 
-            <nav className="hidden items-center gap-6 text-sm font-semibold sm:flex">
-              <Link href="/" className="hover:text-maroon" style={{ color: "var(--maroon-dark)" }}>
+            <nav className="hidden items-center gap-2.5 text-sm font-semibold sm:flex">
+              <Link
+                href="/"
+                className="rounded-full px-4 py-1.5 shadow-sm transition-transform hover:-translate-y-0.5"
+                style={{ background: "rgba(255,255,255,0.65)", color: "var(--maroon-dark)" }}
+              >
                 Home
               </Link>
-              <Link href="/spiritual-seva" className="hover:text-maroon" style={{ color: "var(--maroon-dark)" }}>
+              <Link
+                href="/spiritual-seva"
+                className="rounded-full px-4 py-1.5 shadow-sm transition-transform hover:-translate-y-0.5"
+                style={{ background: "rgba(255,255,255,0.65)", color: "var(--maroon-dark)" }}
+              >
                 Spiritual Seva
               </Link>
-              <a href="/#invite" className="hover:text-maroon" style={{ color: "var(--maroon-dark)" }}>
+              <a
+                href="/#invite"
+                className="rounded-full px-4 py-1.5 shadow-sm transition-transform hover:-translate-y-0.5"
+                style={{ background: "rgba(255,255,255,0.65)", color: "var(--maroon-dark)" }}
+              >
                 Invite Us
               </a>
             </nav>
