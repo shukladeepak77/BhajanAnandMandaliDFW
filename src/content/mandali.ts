@@ -4,34 +4,38 @@ export type Offering = {
   description: string;
 };
 
-// What the mandali does — mirrors the "Path & Bhakti Events" style already
-// used on dharmpathusa.com/spiritual-seva, scoped to what this group itself
-// offers (group bhajan/kirtan singing), not the parent foundation's full
-// catalog of seva offerings.
+// Matches the group's own poster exactly: Keertan · Bhajan Sandhya · Mata
+// ki Chowki · Sundarkand Path · Satsang.
 export const offerings: Offering[] = [
+  {
+    icon: "🙏",
+    title: "Keertan",
+    description:
+      "Group kirtan — call-and-response devotional chanting with dhol, harmonium and taal, open to all voices and all levels.",
+  },
   {
     icon: "🎶",
     title: "Bhajan Sandhya",
     description:
-      "A soul-stirring evening of devotional bhajans and sankirtan — group singing, dhol and harmonium, open to all voices and all levels.",
+      "A soul-stirring evening of devotional bhajans and sankirtan — group singing in devotion, for home or community gatherings.",
   },
   {
     icon: "🪔",
     title: "Mata Ki Chowki",
     description:
-      "Devotional gatherings in reverence of Mata — uplifting community evenings of bhajan and bhakti, open to all.",
-  },
-  {
-    icon: "🙏",
-    title: "Naam Jap & Kirtan",
-    description:
-      "Guided group mantra jap and kirtan sessions, with correct uccharan and meaning explained for beginners and seasoned singers alike.",
+      "Devotional gatherings in reverence of Mata — uplifting evenings of bhajan and bhakti, open to all.",
   },
   {
     icon: "📿",
-    title: "Festival & Occasion Singing",
+    title: "Sundarkand Path",
     description:
-      "Bhajan mandali participation for festivals, home gatherings and community occasions — coordinated with full devotion and care.",
+      "Devotional recitation from Ramcharitmanas — sankalp, path and concluding aarti for peace, protection and positive energy.",
+  },
+  {
+    icon: "🕉️",
+    title: "Satsang",
+    description:
+      "Gatherings of devotional singing, reflection and fellowship — bringing the community together in a spirit of bhakti.",
   },
 ];
 
@@ -47,13 +51,13 @@ export const faqs: FaqItem[] = [
       "Anyone with an open heart and love for devotional singing — no formal training required. Singers, instrumentalists and listeners are all part of the mandali.",
   },
   {
-    question: "Is this affiliated with Dharma Path USA Foundation?",
+    question: "Can we invite the mandali to our home or event?",
     answer:
-      "Yes — Bhajan Anand Mandali of DFW operates under the umbrella of Dharma Path USA Foundation, a 501(c)(3) non-profit, as its dedicated bhajan and kirtan group.",
+      "Yes — we're happy to come for Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path or Satsang. Reach out by phone or WhatsApp to coordinate.",
   },
   {
     question: "How do I get in touch about a gathering?",
     answer:
-      "Reach out using the contact details below, or through Dharma Path USA Foundation's main site — we'll be glad to connect.",
+      "Call or message us on WhatsApp at (214) 945-5080 — we'll be glad to connect and coordinate with full devotion.",
   },
 ];

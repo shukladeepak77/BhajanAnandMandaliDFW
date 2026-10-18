@@ -1,24 +1,15 @@
+import Image from "next/image";
 import HeroBanner from "@/components/HeroBanner";
 import { offerings, faqs } from "@/content/mandali";
-import {
-  SITE_URL,
-  PARENT_SITE_URL,
-  CONTACT_PHONE,
-  CONTACT_PHONE_HREF,
-  CONTACT_EMAIL,
-} from "@/lib/site";
+import { SITE_URL, CONTACT_PHONE, CONTACT_PHONE_HREF, WHATSAPP_URL } from "@/lib/site";
 
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Bhajan Anand Mandali of DFW",
+    name: "Bhajan Anand Mandali",
     url: SITE_URL,
-    parentOrganization: {
-      "@type": "NGO",
-      name: "Dharma Path USA Foundation",
-      url: PARENT_SITE_URL,
-    },
+    areaServed: "Dallas–Fort Worth, Texas",
   };
 
   return (
@@ -29,10 +20,24 @@ export default function Home() {
       />
 
       <HeroBanner
-        eyebrow="॥ जय जय श्री राधे ॥"
-        title="Bhajan Anand Mandali of DFW"
-        description="Singing in Devotion, Uniting in Dharma — a community bhajan and kirtan group serving the Dallas–Fort Worth area under Dharma Path USA Foundation."
+        eyebrow="॥ श्री गणेशाय नमः ॥"
+        title="Bhajan Anand Mandali"
+        description="भजन से आनंद, आनंद से भगवान — Keertan · Bhajan Sandhya · Mata ki Chowki · Sundarkand Path · Satsang, serving the DFW area, Texas."
       />
+
+      {/* Poster */}
+      <div className="mt-8 flex justify-center">
+        <div className="w-full max-w-sm overflow-hidden rounded-[24px] shadow-[var(--shadow)]">
+          <Image
+            src="/images/poster.webp"
+            alt="Bhajan Anand Mandali — Keertan, Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang"
+            width={1080}
+            height={1920}
+            className="h-auto w-full"
+            priority
+          />
+        </div>
+      </div>
 
       {/* About */}
       <section className="mt-10 rounded-[24px] border border-border-muted bg-surface px-5 py-7 text-center shadow-[var(--shadow)] sm:px-8 sm:py-9">
@@ -43,25 +48,11 @@ export default function Home() {
           A Community of Devotional Singing
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-foreground/85 sm:text-base">
-          Bhajan Anand Mandali of DFW brings together voices, instruments and
-          hearts in devotion through bhajan, kirtan and sankirtan. We gather
-          to sing the names of the Divine, build community, and offer this
-          seva in the spirit of Sanatan Dharma — open to all who wish to
-          join in song.
-        </p>
-        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-foreground/70 sm:text-base">
-          The mandali operates as a dedicated bhajan and kirtan group under
-          the umbrella of{" "}
-          <a
-            href={PARENT_SITE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-orange-900 underline decoration-orange-900/30 underline-offset-2 hover:decoration-orange-900"
-          >
-            Dharma Path USA Foundation
-          </a>
-          , a 501(c)(3) non-profit dedicated to Sanatan Dharma awareness,
-          spiritual gatherings and community seva.
+          Bhajan Anand Mandali brings together voices, instruments and
+          hearts in devotion through bhajan, kirtan and sankirtan, serving
+          the DFW area, Texas. We gather to sing the names of the Divine,
+          build community, and offer this seva in the spirit of Sanatan
+          Dharma — open to all who wish to join in song.
         </p>
       </section>
 
@@ -94,18 +85,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Schedule / Connect */}
+      {/* Invite / Connect */}
       <section className="mt-10 rounded-[24px] border border-border-muted bg-surface px-5 py-7 text-center shadow-[var(--shadow)] sm:px-8 sm:py-9">
         <p className="text-sm font-semibold tracking-wide text-orange-900/70 uppercase">
-          Join a Gathering
+          Invite Us
         </p>
         <h2 className="mt-1 text-2xl font-bold text-orange-900 sm:text-3xl">
-          Sing With Us
+          Invite Us to Your Home for Keertan 🙏
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-foreground/85 sm:text-base">
-          Gatherings are announced as they are scheduled. Reach out below and
-          we&apos;ll be glad to share details of the next Bhajan Sandhya,
-          Mata Ki Chowki, or kirtan session near you.
+          Reach out below and we&apos;ll be glad to coordinate a Keertan,
+          Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path or Satsang for
+          your home or community gathering.
         </p>
 
         <div className="mx-auto mt-6 flex max-w-sm flex-col gap-3 sm:flex-row sm:justify-center">
@@ -119,10 +110,13 @@ export default function Home() {
             📞 Call {CONTACT_PHONE}
           </a>
           <a
-            href={`mailto:${CONTACT_EMAIL}`}
-            className="rounded-full border border-orange-900/30 bg-white px-6 py-3 text-sm font-semibold text-orange-900 shadow-sm transition-transform hover:-translate-y-0.5"
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5"
+            style={{ background: "#25D366" }}
           >
-            ✉️ Email Us
+            💬 WhatsApp
           </a>
         </div>
       </section>
@@ -157,7 +151,7 @@ export default function Home() {
 
       {/* Closing line */}
       <p className="font-devanagari mt-10 text-center text-base font-semibold text-orange-900/80">
-        🙏 सब भक्तों का स्वागत है 🙏
+        Jai Shri Ram · Jai Mata Di · Har Har Mahadev · Jai Shri Krishna
       </p>
     </div>
   );

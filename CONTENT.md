@@ -1,42 +1,39 @@
 # Where the content comes from
 
-This is a single-page organizational site for Bhajan Anand Mandali of DFW,
-the dedicated bhajan/kirtan group operating under Dharma Path USA
-Foundation's umbrella (registered with the Texas Secretary of State as an
-Assumed Name Certificate on Dharma Path USA Foundation's nonprofit
-registration, File #806577129).
+This is a single-page site for Bhajan Anand Mandali, a community bhajan
+and kirtan group serving the DFW area, Texas.
 
 `src/content/mandali.ts` holds the page's structured content: the
-`offerings` array (what the mandali does — Bhajan Sandhya, Mata Ki Chowki,
-Naam Jap & Kirtan, Festival singing) and `faqs`. This content style and
-tone mirrors the "Path & Bhakti Events" section of
-[dharmpathusa.com/spiritual-seva](https://dharmpathusa.com/spiritual-seva),
-scoped down to just what this specific group (group bhajan/kirtan singing)
-offers, rather than the parent foundation's full seva catalog (discourses,
-individual path requests, etc., which stay on the main site).
+`offerings` array (Keertan, Bhajan Sandhya, Mata Ki Chowki, Sundarkand
+Path, Satsang — matching the group's own promotional poster exactly) and
+`faqs`.
 
-No specific schedule (day/time/venue) is published yet — the "Sing With
-Us" section intentionally points people to contact details rather than a
-fabricated recurring schedule, since the actual gathering cadence is set
-and communicated by the mandali's own team, not hard-coded here.
+The poster image (`public/images/poster.webp`) is the group's own
+existing promotional artwork, reused here as both the page's visual hero
+element and the Open Graph/social-share image.
+
+No specific schedule (day/time/venue) is published — the "Invite Us"
+section intentionally points people to phone/WhatsApp contact rather than
+a fabricated recurring schedule, since gatherings are arranged per
+invitation (matching the poster's own "Invite us to your home for
+Keertan" framing) rather than on a fixed public calendar.
 
 ## Updating content
 
 - **Offerings / what we do**: edit the `offerings` array in
   `src/content/mandali.ts`.
 - **FAQ**: edit the `faqs` array in the same file.
-- **Contact details** (phone/email, parent site link): edit
-  `src/lib/site.ts`.
+- **Contact details**: edit `src/lib/site.ts`
+  (`CONTACT_PHONE`/`CONTACT_PHONE_HREF`/`WHATSAPP_URL`).
 - The home page (`src/app/page.tsx`) renders both arrays automatically —
   no other file needs to change for content edits.
 
 ## Branding
 
-Reuses `dharma-path-logo.png` from the parent foundation's own asset,
-since Bhajan Anand Mandali of DFW is legally the same entity (Dharma Path
-USA Foundation) operating under an assumed name — not a separate
-organization. Replace with a dedicated mandali logo/photo later if one is
-designed.
+This site is intentionally standalone — it does not reference any parent
+organization anywhere in its public content, metadata, or structured
+data, per explicit instruction. Logo/branding is the group's own poster
+artwork, not a borrowed asset.
 
 ## Domain
 

@@ -34,11 +34,12 @@ export const metadata: Metadata = {
     "Bhajan Anand Mandali",
     "Bhajan Mandali DFW",
     "Dallas Fort Worth bhajan group",
-    "Dharma Path USA Foundation",
     "Hindu bhajan kirtan Texas",
     "Bhajan Sandhya DFW",
     "Mata Ki Chowki Dallas",
-    "Sanatan Dharma community DFW",
+    "Keertan DFW",
+    "Sundarkand Path Texas",
+    "Satsang Dallas Fort Worth",
   ],
   category: "religion",
   alternates: {
@@ -89,14 +90,10 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: SITE_NAME,
-    alternateName: "Bhajan Anand Mandali",
+    alternateName: "Bhajan Anand Mandali of DFW",
     url: SITE_URL,
     description: SITE_DESCRIPTION,
-    parentOrganization: {
-      "@type": "NGO",
-      name: "Dharma Path USA Foundation",
-      url: "https://dharmpathusa.com",
-    },
+    areaServed: "Dallas–Fort Worth, Texas",
     inLanguage: "en",
   };
 

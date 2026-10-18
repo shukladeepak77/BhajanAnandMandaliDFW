@@ -1,14 +1,12 @@
-# Bhajan Anand Mandali of DFW
+# Bhajan Anand Mandali
 
-A single-page organizational website for Bhajan Anand Mandali of DFW — a
-community bhajan and kirtan group operating under the umbrella of
-[Dharma Path USA Foundation](https://dharmpathusa.com), a 501(c)(3)
-non-profit, via an Assumed Name Certificate filed with the Texas Secretary
-of State (File #806577129).
+A single-page website for Bhajan Anand Mandali — a community bhajan and
+kirtan group serving the Dallas–Fort Worth area, Texas.
 
-Sections: hero, about, what we do (Bhajan Sandhya, Mata Ki Chowki, Naam
-Jap & Kirtan, Festival singing), how to connect, and FAQ. See `CONTENT.md`
-for where each piece of content comes from and how to update it.
+Sections: hero, about, what we do (Keertan, Bhajan Sandhya, Mata Ki
+Chowki, Sundarkand Path, Satsang), invite us / contact, and FAQ. See
+`CONTENT.md` for where each piece of content comes from and how to
+update it.
 
 ## Stack
 

@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import dharmaPathLogo from "../../public/images/dharma-path-logo.png";
-import { PARENT_SITE_URL } from "@/lib/site";
+import { WHATSAPP_URL } from "@/lib/site";
 
 export default function Header() {
   return (
@@ -11,7 +9,7 @@ export default function Header() {
       style={{ background: "linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%)" }}
     >
       <div className="mx-auto max-w-[2000px] px-4 py-3 sm:px-6">
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-between">
           <Link
             href="/"
             style={{
@@ -21,7 +19,7 @@ export default function Header() {
                 "0 0 0 3px rgba(253,224,71,0.55), 0 6px 20px rgba(69,10,10,0.5), inset 0 1px 1px rgba(255,255,255,0.45)",
             }}
             className="group relative flex w-[250px] shrink-0 items-center justify-center gap-2 overflow-hidden rounded-full px-4 py-2.5 ring-1 ring-gold/60 transition-all duration-200 hover:-translate-y-0.5 hover:ring-gold sm:w-[290px] sm:gap-2.5 sm:px-5"
-            aria-label="Bhajan Anand Mandali of DFW — Home"
+            aria-label="Bhajan Anand Mandali — Home"
           >
             <span
               aria-hidden="true"
@@ -60,25 +58,14 @@ export default function Header() {
             </span>
           </Link>
           <a
-            href={PARENT_SITE_URL}
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full border px-3 py-1.5 text-xs font-semibold shadow-sm transition-colors hover:bg-white sm:inline-block"
-            style={{
-              background: "rgba(255,255,255,0.65)",
-              borderColor: "rgba(124,45,18,0.25)",
-              color: "#7c2d12",
-            }}
+            className="rounded-full px-4 py-2 text-xs font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 sm:text-sm"
+            style={{ background: "#25D366" }}
           >
-            Dharma Path USA Foundation →
+            💬 WhatsApp
           </a>
-          <div className="ml-auto flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-full ring-2 ring-white/70 shadow-[0_2px_8px_rgba(69,10,10,0.4)] sm:h-20 sm:w-20">
-            <Image
-              src={dharmaPathLogo}
-              alt="Dharma Path USA Foundation"
-              className="h-full w-full object-cover"
-            />
-          </div>
         </div>
       </div>
     </header>
