@@ -4,14 +4,26 @@ export default function Hero() {
   return (
     <section>
       {/* Full-width banner — the group's own artwork carries the title,
-          tagline, offerings and contact info visually. */}
+          tagline, offerings and contact info visually. Art-directed by
+          screen size: the portrait poster reads far more clearly on a
+          phone-width screen than the wide banner does once scaled down,
+          so mobile gets its own version rather than a squeezed-down crop
+          of the desktop one. */}
       <div className="relative w-full overflow-hidden">
+        <Image
+          src="/images/hero-banner-mobile.webp"
+          alt="Bhajan Anand Mandali — DFW Area, Texas. Bhajan se Anand, Anand se Bhagwan. Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang/Keertan. Invite Us, Ignite Devotion. (214) 945-5080 · WhatsApp/Text/Call."
+          width={1429}
+          height={2000}
+          className="block h-auto w-full sm:hidden"
+          priority
+        />
         <Image
           src="/images/hero-banner-v2.webp"
           alt="Bhajan Anand Mandali — DFW Area, Texas. Bhajan se Anand, Anand se Bhagwan. Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang/Keertan. Invite Us, Ignite Devotion. (214) 945-5080 · WhatsApp/Text/Call."
           width={1920}
           height={1080}
-          className="h-auto w-full"
+          className="hidden h-auto w-full sm:block"
           priority
         />
         {/* Visually hidden heading — the banner image carries this text
