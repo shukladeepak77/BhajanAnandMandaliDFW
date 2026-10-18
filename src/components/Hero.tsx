@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -40,13 +41,13 @@ export default function Hero() {
         style={{ background: "var(--maroon)" }}
       >
         <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-3 sm:flex-row">
-          <a
-            href="#spiritual-seva"
+          <Link
+            href="/spiritual-seva"
             className="rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
             style={{ background: "var(--orange)" }}
           >
             Spiritual Seva
-          </a>
+          </Link>
           <a
             href="#invite"
             className="rounded-[10px] border border-white/60 px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:bg-white/10"
