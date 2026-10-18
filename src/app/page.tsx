@@ -20,7 +20,7 @@ const INVITE_STEPS = [
     step: "STEP 3",
     title: "Reach Out",
     description:
-      "Call or message us on WhatsApp with your details and any special intentions.",
+      "Call, text, or message us on WhatsApp with your details and any special intentions.",
   },
   {
     step: "STEP 4",

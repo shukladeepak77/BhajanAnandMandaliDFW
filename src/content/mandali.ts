@@ -90,11 +90,11 @@ export const faqs: FaqItem[] = [
   {
     question: "Can we invite the mandali to our home or event?",
     answer:
-      "Yes — we're happy to come for any of the gatherings listed above. Reach out by phone or WhatsApp with your date, occasion and location, and we'll coordinate with full devotion.",
+      "Yes — we're happy to come for any of the gatherings listed above. Reach out by phone, text, or WhatsApp with your date, occasion and location, and we'll coordinate with full devotion.",
   },
   {
     question: "How do I get in touch?",
     answer:
-      "Call or message us on WhatsApp at (214) 945-5080 — we'll be glad to connect and help you plan your gathering.",
+      "Call, text, or message us on WhatsApp at (214) 945-5080 — we'll be glad to connect and help you plan your gathering.",
   },
 ];
