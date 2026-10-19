@@ -13,15 +13,15 @@ export default function Hero() {
       <div className="relative w-full overflow-hidden">
         <Image
           src="/images/hero-banner-mobile.webp"
-          alt="Bhajan Anand Mandali — DFW Area, Texas. Bhajan se Anand, Anand se Bhagwan. Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang/Keertan. Invite Us, Ignite Devotion. (214) 945-5080 · WhatsApp/Text/Call."
+          alt="Bhajan Anand Mandali of DFW — DFW Area, Texas. Bhajan se Anand, Anand se Bhagwan. Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang/Keertan. Invite Us, Ignite Devotion. (214) 945-5080 · WhatsApp/Text/Call."
           width={1429}
           height={2000}
           className="block h-auto w-full sm:hidden"
           priority
         />
         <Image
-          src="/images/hero-banner-v2.webp"
-          alt="Bhajan Anand Mandali — DFW Area, Texas. Bhajan se Anand, Anand se Bhagwan. Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang/Keertan. Invite Us, Ignite Devotion. (214) 945-5080 · WhatsApp/Text/Call."
+          src="/images/hero-banner-v3.webp"
+          alt="Bhajan Anand Mandali of DFW — DFW Area, Texas. Bhajan se Anand, Anand se Bhagwan. Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang/Keertan. Invite Us, Ignite Devotion. (214) 945-5080 · WhatsApp/Text/Call."
           width={1920}
           height={1080}
           className="hidden h-auto w-full sm:block"
@@ -30,8 +30,8 @@ export default function Hero() {
         {/* Visually hidden heading — the banner image carries this text
             visually, but search engines and screen readers need real text. */}
         <h1 className="sr-only">
-          Bhajan Anand Mandali — Devotional Singing, Rooted in Bhakti, DFW
-          Area, Texas
+          Bhajan Anand Mandali of DFW — Devotional Singing, Rooted in Bhakti,
+          DFW Area, Texas
         </h1>
       </div>
 

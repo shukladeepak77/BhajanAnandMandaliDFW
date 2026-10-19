@@ -6,7 +6,7 @@ import { SITE_NAME, CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Spiritual Seva",
   description:
-    "Every bhajan and kirtan seva Bhajan Anand Mandali performs — Mata Ka Jagran, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Akhand RamCharitManas Path, and Satsang — for homes and community gatherings across the DFW area, Texas.",
+    "Every bhajan and kirtan seva Bhajan Anand Mandali of DFW performs — Mata Ka Jagran, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Akhand RamCharitManas Path, and Satsang — for homes and community gatherings across the DFW area, Texas.",
 };
 
 export default function SpiritualSevaPage() {

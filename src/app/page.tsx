@@ -34,7 +34,7 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Bhajan Anand Mandali",
+    name: "Bhajan Anand Mandali of DFW",
     url: SITE_URL,
     areaServed: "Dallas–Fort Worth, Texas",
   };
@@ -96,11 +96,11 @@ export default function Home() {
             style={{ background: "var(--orange)" }}
           />
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-foreground/80 sm:text-base">
-            Bhajan Anand Mandali brings together voices, instruments and
-            hearts in devotion through bhajan, kirtan and sankirtan, serving
-            the DFW area, Texas. Each gathering is an act of seva — sung in
-            the spirit of Sanatan Dharma, bringing peace and community
-            wherever we go.
+            Bhajan Anand Mandali of DFW brings together voices, instruments
+            and hearts in devotion through bhajan, kirtan and sankirtan,
+            serving the DFW area, Texas. Each gathering is an act of seva —
+            sung in the spirit of Sanatan Dharma, bringing peace and
+            community wherever we go.
           </p>
           <a
             href="#invite"
@@ -211,7 +211,7 @@ export default function Home() {
             Invite Us
           </p>
           <h2 className="font-display mt-2 text-2xl font-bold text-maroon sm:text-3xl lg:text-4xl">
-            How to Invite Bhajan Anand Mandali
+            How to Invite Bhajan Anand Mandali of DFW
           </h2>
           <div
             className="mx-auto mt-3 h-1 w-14 rounded-full"

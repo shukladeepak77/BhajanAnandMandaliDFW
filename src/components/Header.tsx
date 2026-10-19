@@ -28,7 +28,7 @@ export default function Header() {
             <Link
               href="/"
               className="flex items-center gap-2.5"
-              aria-label="Bhajan Anand Mandali — Home"
+              aria-label="Bhajan Anand Mandali of DFW — Home"
             >
               <span
                 className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-xl shadow-[0_2px_8px_rgba(82,21,21,0.4)] sm:h-12 sm:w-12"
@@ -49,7 +49,7 @@ export default function Header() {
                   Bhajan Anand
                 </span>
                 <span className="block text-[10px] font-semibold tracking-[0.15em] text-gold sm:text-xs">
-                  MANDALI
+                  MANDALI OF DFW
                 </span>
               </span>
             </Link>

@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   keywords: [
-    "Bhajan Anand Mandali",
+    "Bhajan Anand Mandali of DFW",
     "Bhajan Mandali DFW",
     "Dallas Fort Worth bhajan group",
     "Hindu bhajan kirtan Texas",

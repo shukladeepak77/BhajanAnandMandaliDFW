@@ -83,7 +83,7 @@ export type FaqItem = {
 
 export const faqs: FaqItem[] = [
   {
-    question: "What does Bhajan Anand Mandali do?",
+    question: "What does Bhajan Anand Mandali of DFW do?",
     answer:
       "We bring devotional singing — Mata Ka Jagran, Bhajan Sandhya, Mata Ki Chowki, Sundarkand Path, Satsang and more — to homes and community gatherings across the DFW area, Texas.",
   },
