@@ -12,7 +12,7 @@ export default function Hero() {
           of the desktop one. */}
       <div className="relative w-full overflow-hidden">
         <Image
-          src="/images/hero-banner-mobile.webp"
+          src="/images/hero-banner-mobile-v2.webp"
           alt="Bhajan Anand Mandali of DFW — DFW Area, Texas. Bhajan se Anand, Anand se Bhagwan. Bhajan Sandhya, Mata ki Chowki, Sundarkand Path, Satsang/Keertan. Invite Us, Ignite Devotion. (214) 945-5080 · WhatsApp/Text/Call."
           width={1429}
           height={2000}
