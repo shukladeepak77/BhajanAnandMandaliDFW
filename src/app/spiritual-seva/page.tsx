@@ -111,11 +111,18 @@ export default function SpiritualSevaPage() {
             Whether it&apos;s a bhajan gathering or a Sundarkand Path — we
             are here to serve with full devotion.
           </p>
-          <div className="mt-6 flex items-center justify-center">
-            <a
-              href={`tel:${CONTACT_PHONE_HREF}`}
+          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              href="/invite-request"
               className="rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
               style={{ background: "var(--orange)" }}
+            >
+              Request an Event →
+            </Link>
+            <a
+              href={`tel:${CONTACT_PHONE_HREF}`}
+              className="rounded-[10px] px-6 py-3 text-sm font-semibold shadow-md transition-transform hover:-translate-y-0.5"
+              style={{ background: "var(--gold)", color: "var(--maroon-dark)" }}
             >
               📞 Call {CONTACT_PHONE}
             </a>

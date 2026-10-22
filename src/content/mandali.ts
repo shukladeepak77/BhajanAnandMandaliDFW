@@ -76,6 +76,13 @@ export const offeringGroups: OfferingGroup[] = [
 // Flattened list, used for the shorter highlight strip in the hero card.
 export const highlightOfferings: Offering[] = offeringGroups[0].items.slice(0, 5);
 
+// Flattened titles, used as the "Type of Gathering" dropdown options on the
+// Event Request form — kept in sync with offeringGroups automatically
+// rather than duplicated by hand.
+export const EVENT_TYPE_OPTIONS: string[] = offeringGroups.flatMap((g) =>
+  g.items.map((item) => item.title)
+);
+
 export type FaqItem = {
   question: string;
   answer: string;

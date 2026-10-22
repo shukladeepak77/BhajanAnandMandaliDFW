@@ -6,3 +6,4 @@ export const SITE_OG_IMAGE = "/images/hero-banner-v3.webp";
 export const GA_MEASUREMENT_ID = "";
 export const CONTACT_PHONE = "(214) 945-5080";
 export const CONTACT_PHONE_HREF = "+12149455080";
+export const CONTACT_EMAIL = "contact@bhajananandmandali.com";

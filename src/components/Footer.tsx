@@ -3,6 +3,7 @@ import { CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/site";
 const QUICK_LINKS = [
   { label: "Spiritual Seva", href: "/spiritual-seva" },
   { label: "Invite Us", href: "/#invite" },
+  { label: "Request an Event", href: "/invite-request" },
   { label: "FAQ", href: "/#faq" },
 ];
 

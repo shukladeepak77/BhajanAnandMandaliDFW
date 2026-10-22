@@ -20,7 +20,7 @@ const INVITE_STEPS = [
     step: "STEP 3",
     title: "Reach Out",
     description:
-      "Call, text, or message us on WhatsApp with your details and any special intentions.",
+      "Submit a Request an Event form online, or call, text, or message us on WhatsApp — whichever is easiest for you.",
   },
   {
     step: "STEP 4",
@@ -238,6 +238,16 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            href="/invite-request"
+            className="inline-block rounded-[10px] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
+            style={{ background: "var(--orange)" }}
+          >
+            Request an Event →
+          </Link>
+        </div>
       </section>
 
       {/* Final CTA */}
@@ -253,11 +263,18 @@ export default function Home() {
             Whether it&apos;s a bhajan gathering or a Sundarkand Path — we
             are here to serve with full devotion.
           </p>
-          <div className="mt-6 flex items-center justify-center">
-            <a
-              href={`tel:${CONTACT_PHONE_HREF}`}
+          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              href="/invite-request"
               className="rounded-[10px] px-6 py-3 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
               style={{ background: "var(--orange)" }}
+            >
+              Request an Event →
+            </Link>
+            <a
+              href={`tel:${CONTACT_PHONE_HREF}`}
+              className="rounded-[10px] px-6 py-3 text-sm font-semibold shadow-md transition-transform hover:-translate-y-0.5"
+              style={{ background: "var(--gold)", color: "var(--maroon-dark)" }}
             >
               📞 Call {CONTACT_PHONE}
             </a>
