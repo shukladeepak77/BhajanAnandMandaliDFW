@@ -217,6 +217,13 @@ export default function Home() {
             className="mx-auto mt-3 h-1 w-14 rounded-full"
             style={{ background: "var(--orange)" }}
           />
+          <Link
+            href="/invite-request"
+            className="mt-6 inline-block rounded-[10px] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
+            style={{ background: "var(--orange)" }}
+          >
+            Request an Event →
+          </Link>
         </div>
 
         <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
@@ -237,16 +244,6 @@ export default function Home() {
               </p>
             </div>
           ))}
-        </div>
-
-        <div className="mt-10 text-center">
-          <Link
-            href="/invite-request"
-            className="inline-block rounded-[10px] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-transform hover:-translate-y-0.5"
-            style={{ background: "var(--orange)" }}
-          >
-            Request an Event →
-          </Link>
         </div>
       </section>
 
