@@ -2,6 +2,15 @@
   command = "npm run build"
   publish = "out"
 
+# Force the auto-generated Netlify subdomain to redirect to the custom
+# domain, so it's not independently usable and doesn't duplicate-index
+# the same content under two hostnames.
+[[redirects]]
+  from = "https://bhajananandmandali.netlify.app/*"
+  to = "https://bhajananandmandali.com/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
